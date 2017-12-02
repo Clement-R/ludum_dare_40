@@ -1351,8 +1351,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791f768af079c5b4b9fac4c4f70ff13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleFactor: 125
-  repairValue: 25
+  scaleFactor: 1
+  walls:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  wallSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1746873979
 Prefab:
   m_ObjectHideFlags: 0
