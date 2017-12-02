@@ -30,21 +30,13 @@ public class WearManager : MonoBehaviour {
         for (int i = 0; i < 4; i++)
         {
             _walls[i] = new Wall();
-            _walls[i].health = 6;
+            _walls[i].health = 5;
+            _wallsObjects[i].sprite = wallSprite[5];
         }
 
         _timeBeforeDecrease = (ResourceManager.maxBunnies / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
         
         StartCoroutine(LoseWear());
-    }
-
-    private void Update()
-    {
-        // DEBUG
-        if(Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            print("ALPHA");
-        }
     }
 
     public static void RepairWall(GameObject wall)
@@ -59,6 +51,7 @@ public class WearManager : MonoBehaviour {
                 _walls[index].health = Mathf.Clamp(_walls[index].health, 0, 6);
 
                 // TODO : Lose toolbox
+                break;
             }
             index++;
         }
@@ -66,6 +59,7 @@ public class WearManager : MonoBehaviour {
 
     IEnumerator LoseWear()
     {
+        print(_timeBeforeDecrease);
         yield return new WaitForSeconds(_timeBeforeDecrease);
 
         // Find wall with the biggest health
@@ -84,16 +78,17 @@ public class WearManager : MonoBehaviour {
 
         // Get random wall that will get damaged
         int wallIndex = walls[Random.Range(0, walls.Count)];
+        _walls[wallIndex].health--;
+
+        if(_walls[wallIndex].health == 0)
+        {
+            EventManager.TriggerEvent("LoseWear");
+        }
+
         // Change its sprite according to its health
         _wallsObjects[wallIndex].sprite = wallSprite[_walls[wallIndex].health];
 
         _timeBeforeDecrease = (ResourceManager.maxBunnies / (float)ResourceManager.GetNumberOfBunnies()) * scaleFactor;
         StartCoroutine(LoseWear());
-    }
-
-    private void RepairShip()
-    {
-        //_wear -= repairValue;
-        //_wear = Mathf.Clamp(_wear, 0f, _maxWear);
     }
 }
