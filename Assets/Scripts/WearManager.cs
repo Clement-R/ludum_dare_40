@@ -11,15 +11,20 @@ public class WearManager : MonoBehaviour {
     }
 
     public float scaleFactor = 1f;
-    public SpriteRenderer[] walls = new SpriteRenderer[4];
+    public List<SpriteRenderer> wallsObjects = new List<SpriteRenderer>();
+
+    static private List<SpriteRenderer> _wallsObjects = new List<SpriteRenderer>();
     public Sprite[] wallSprite = new Sprite[6];
 
-    private Wall[] _walls = new Wall[4];
+    static private Wall[] _walls = new Wall[4];
     private float _timeBeforeDecrease;
 
     private void Start()
     {
-        EventManager.StartListening("UseRepairZone", RepairShip);
+        foreach (var wall in wallsObjects)
+        {
+            _wallsObjects.Add(wall.GetComponent<SpriteRenderer>());
+        }
 
         // Create logical walls
         for (int i = 0; i < 4; i++)
@@ -31,6 +36,32 @@ public class WearManager : MonoBehaviour {
         _timeBeforeDecrease = (ResourceManager.maxBunnies / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
         
         StartCoroutine(LoseWear());
+    }
+
+    private void Update()
+    {
+        // DEBUG
+        if(Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            print("ALPHA");
+        }
+    }
+
+    public static void RepairWall(GameObject wall)
+    {
+        int index = 0;
+        foreach (var wallObject in _wallsObjects)
+        {
+            // Find the wall in our walls
+            if (wallObject.GetInstanceID() == wall.GetInstanceID())
+            {
+                _walls[index].health++;
+                _walls[index].health = Mathf.Clamp(_walls[index].health, 0, 6);
+
+                // TODO : Lose toolbox
+            }
+            index++;
+        }
     }
 
     IEnumerator LoseWear()
@@ -54,7 +85,7 @@ public class WearManager : MonoBehaviour {
         // Get random wall that will get damaged
         int wallIndex = walls[Random.Range(0, walls.Count)];
         // Change its sprite according to its health
-        this.walls[wallIndex].sprite = wallSprite[_walls[wallIndex].health];
+        _wallsObjects[wallIndex].sprite = wallSprite[_walls[wallIndex].health];
 
         _timeBeforeDecrease = (ResourceManager.maxBunnies / (float)ResourceManager.GetNumberOfBunnies()) * scaleFactor;
         StartCoroutine(LoseWear());

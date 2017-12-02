@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 405694216}
   - component: {fileID: 405694215}
   m_Layer: 0
-  m_Name: wall (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,8 +434,9 @@ GameObject:
   - component: {fileID: 435536020}
   - component: {fileID: 435536022}
   - component: {fileID: 435536021}
+  - component: {fileID: 435536023}
   m_Layer: 0
-  m_Name: wall (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -523,6 +524,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &435536023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435536019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d79a205ec3f9a4c8451a7989cdc594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &468919854
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +810,7 @@ GameObject:
   - component: {fileID: 1167084970}
   - component: {fileID: 1167084969}
   m_Layer: 0
-  m_Name: wall (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,7 +909,7 @@ GameObject:
   - component: {fileID: 1203043964}
   - component: {fileID: 1203043963}
   m_Layer: 0
-  m_Name: wall
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1104,7 +1116,7 @@ GameObject:
   - component: {fileID: 1313481536}
   - component: {fileID: 1313481535}
   m_Layer: 0
-  m_Name: wall (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1352,11 +1364,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleFactor: 1
-  walls:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  wallsObjects:
+  - {fileID: 435536022}
+  - {fileID: 405694216}
+  - {fileID: 1313481536}
+  - {fileID: 1167084970}
   wallSprite:
   - {fileID: 0}
   - {fileID: 0}

@@ -10,11 +10,6 @@ public class GameManager : MonoBehaviour {
         EventManager.StartListening("LoseBunny", Lose);
         EventManager.StartListening("LoseWear", Lose);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void Lose()
     {

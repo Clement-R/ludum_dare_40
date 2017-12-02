@@ -89,7 +89,7 @@ public class HolderBehavior : MonoBehaviour {
 
     private void UseZone()
     {
-        if (interactionController.GetIsInRepairZone())
+        if (interactionController.GetIsInWallZone())
         {
             EventManager.TriggerEvent("UseRepairZone");
         }
