@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212069381427027548}
   - component: {fileID: 58847095016772136}
   - component: {fileID: 50481935483937478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bunny
   m_TagString: Bunny
   m_Icon: {fileID: 0}
@@ -53,10 +53,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -70,7 +70,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1217166061105030}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 429b43ce095096b409254cd2d4af0b99, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

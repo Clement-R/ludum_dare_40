@@ -24,6 +24,7 @@ public class HolderBehavior : MonoBehaviour {
             }
         }
         
+        // Grab nearest bunny if there is one
         if(Input.GetMouseButtonDown(0))
         {
             if (_holdedObject != null)
