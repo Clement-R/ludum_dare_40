@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float _maxSpeed = 1000f;
     [SerializeField]
-    private float smoothTime = 0.15f;
+    private float _smoothTime = 0.15f;
+    
     private Vector2 velocity = Vector2.zero;
     private Rigidbody2D _rb;
 
@@ -20,7 +21,8 @@ public class PlayerController : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        Vector2.SmoothDamp(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), ref velocity, smoothTime, _maxSpeed, Time.deltaTime);
+        // Move the character
+        Vector2.SmoothDamp(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), ref velocity, _smoothTime, _maxSpeed, Time.deltaTime);
         _rb.velocity = velocity;
     }
 }
