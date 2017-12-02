@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="80">
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3346622015" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Attenuations\Default Work Unit.wwu" DateLow="3346506904" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Audio Devices\Default Work Unit.wwu" DateLow="3346440601" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Control Surface Sessions\Default Work Unit.wwu" DateLow="3346496895" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Conversion Settings\Default Work Unit.wwu" DateLow="3346410092" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Conversion Settings\Factory Conversion Settings.wwu" DateLow="2578553738" DateHigh="30630190"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3346531930" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Effects\Default Work Unit.wwu" DateLow="3346481880" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Effects\Factory Effects.wwu" DateLow="2578573759" DateHigh="30630190"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Events\Default Work Unit.wwu" DateLow="3346571968" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Game Parameters\Default Work Unit.wwu" DateLow="3346370057" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3346450130" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\ludum_dare_40.wproj" DateLow="3346320010" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3346612051" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Mixing Sessions\Default Work Unit.wwu" DateLow="3346546945" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Modulators\Default Work Unit.wwu" DateLow="3346340024" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Presets\Default Work Unit.wwu" DateLow="3346390074" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Queries\Default Work Unit.wwu" DateLow="3346420101" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Queries\Factory Queries.wwu" DateLow="2578633815" DateHigh="30630190"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\SoundBanks\Default Work Unit.wwu" DateLow="3346591986" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3346470160" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\States\Default Work Unit.wwu" DateLow="3346581986" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Switches\Default Work Unit.wwu" DateLow="3346556954" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Triggers\Default Work Unit.wwu" DateLow="3346521921" DateHigh="30632799"/>
+	<ValidationCacheItem File="E:\_Dev\Gamedev\ludum_dare_40_wwise\ludum_dare_40\Virtual Acoustics\Default Work Unit.wwu" DateLow="3346360045" DateHigh="30632799"/>
+</ValidationCache>

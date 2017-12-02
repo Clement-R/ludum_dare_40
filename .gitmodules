@@ -1,0 +1,3 @@
+[submodule "wwise"]
+	path = wwise
+	url = git@github.com:Clement-R/ludum_dare_40_wwise.git
