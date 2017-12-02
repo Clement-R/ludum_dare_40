@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: 7bce00af409109349ad4c418ef599c7f
+timeCreated: 1512234088
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: lapin_idle_114x130_0
+    21300002: lapin_idle_114x130_1
+    21300004: lapin_idle_114x130_2
+    21300006: lapin_idle_114x130_3
+    21300008: lapin_idle_114x130_4
+    21300010: lapin_idle_114x130_5
+    21300012: lapin_idle_114x130_6
+    21300014: lapin_idle_114x130_7
+    21300016: lapin_idle_114x130_8
+    21300018: lapin_idle_114x130_9
+    21300020: lapin_idle_114x130_10
+    21300022: lapin_idle_114x130_11
+    21300024: lapin_idle_114x130_12
+    21300026: lapin_idle_114x130_13
+    21300028: lapin_idle_114x130_14
+    21300030: lapin_idle_114x130_15
+    21300032: lapin_idle_114x130_16
+    21300034: lapin_idle_114x130_17
+    21300036: lapin_idle_114x130_18
+    21300038: lapin_idle_114x130_19
+    21300040: lapin_idle_114x130_20
+    21300042: lapin_idle_114x130_21
+    21300044: lapin_idle_114x130_22
+    21300046: lapin_idle_114x130_23
+    21300048: lapin_idle_114x130_24
+    21300050: lapin_idle_114x130_25
+    21300052: lapin_idle_114x130_26
+    21300054: lapin_idle_114x130_27
+    21300056: lapin_idle_114x130_28
+    21300058: lapin_idle_114x130_29
+    21300060: lapin_idle_114x130_30
+    21300062: lapin_idle_114x130_31
+    21300064: lapin_idle_114x130_32
+    21300066: lapin_idle_114x130_33
+    21300068: lapin_idle_114x130_34
+    21300070: lapin_idle_114x130_35
+    21300072: lapin_idle_114x130_36
+    21300074: lapin_idle_114x130_37
+    21300076: lapin_idle_114x130_38
+    21300078: lapin_idle_114x130_39
+    21300080: lapin_idle_114x130_40
+    21300082: lapin_idle_114x130_41
+    21300084: lapin_idle_114x130_42
+    21300086: lapin_idle_114x130_43
+    21300088: lapin_idle_114x130_44
+    21300090: lapin_idle_114x130_45
+    21300092: lapin_idle_114x130_46
+    21300094: lapin_idle_114x130_47
+    21300096: lapin_idle_114x130_48
+    21300098: lapin_idle_114x130_49
+    21300100: lapin_idle_114x130_50
+    21300102: lapin_idle_114x130_51
+    21300104: lapin_idle_114x130_52
+    21300106: lapin_idle_114x130_53
+    21300108: lapin_idle_114x130_54
+    21300110: lapin_idle_114x130_55
+    21300112: lapin_idle_114x130_56
+    21300114: lapin_idle_114x130_57
+    21300116: lapin_idle_114x130_58
+    21300118: lapin_idle_114x130_59
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lapin_idle_114x130_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1040
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_2
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1040
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_3
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1040
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_4
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1040
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_5
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1040
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_6
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1040
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_8
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 910
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_9
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 910
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_10
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 910
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_11
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 910
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_12
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 910
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_13
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 910
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_15
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 780
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 780
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_17
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 780
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_18
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 780
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_19
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 780
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_20
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 780
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_22
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 650
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_23
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 650
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_24
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 650
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_25
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 650
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_26
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 650
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_27
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 650
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_29
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 520
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_30
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 520
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_31
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 520
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_32
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 520
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_33
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 520
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_34
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 520
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_36
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 390
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_37
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 390
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_38
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 390
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_39
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 390
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_40
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 390
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_41
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 390
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_43
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 260
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_44
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 260
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_45
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 260
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_46
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 260
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_47
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 260
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_48
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 260
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_50
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 130
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_51
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 130
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_52
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 130
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_53
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 130
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_54
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 130
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_55
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 130
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_57
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_58
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lapin_idle_114x130_59
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
