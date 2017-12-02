@@ -9,15 +9,23 @@ public class WearManager : MonoBehaviour {
     {
         public int health;
     }
-
+    
     public float scaleFactor = 1f;
-    public List<SpriteRenderer> wallsObjects = new List<SpriteRenderer>();
 
-    static private List<SpriteRenderer> _wallsObjects = new List<SpriteRenderer>();
+
+    public List<SpriteRenderer> wallsObjects = new List<SpriteRenderer>();
     public Sprite[] wallSprite = new Sprite[6];
 
-    static private Wall[] _walls = new Wall[4];
+    static private List<SpriteRenderer> _wallsObjects = new List<SpriteRenderer>();
+    private static Sprite[] wallSpriteStatic = new Sprite[6];
+    private static Wall[] _walls = new Wall[4];
     private float _timeBeforeDecrease;
+    
+
+    [SerializeField]
+    static private int _maxToolbox = 5;
+    static private int _remainingToolbox;
+    
 
     private void Start()
     {
@@ -34,9 +42,29 @@ public class WearManager : MonoBehaviour {
             _wallsObjects[i].sprite = wallSprite[5];
         }
 
+        _remainingToolbox = _maxToolbox;
+
         _timeBeforeDecrease = (ResourceManager.maxBunnies / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
-        
+
+        wallSpriteStatic = wallSprite;
+
         StartCoroutine(LoseWear());
+    }
+
+    private void Update()
+    {
+        print(_remainingToolbox);
+    }
+
+    public int GetRemainingToolbox()
+    {
+        return _remainingToolbox;
+    }
+
+    public static void GainToolbox()
+    {
+        _remainingToolbox++;
+        _remainingToolbox = Mathf.Clamp(_remainingToolbox, 0, _maxToolbox);
     }
 
     public static void RepairWall(GameObject wall)
@@ -45,12 +73,20 @@ public class WearManager : MonoBehaviour {
         foreach (var wallObject in _wallsObjects)
         {
             // Find the wall in our walls
-            if (wallObject.GetInstanceID() == wall.GetInstanceID())
+            if (wallObject.gameObject.GetInstanceID() == wall.GetInstanceID())
             {
-                _walls[index].health++;
-                _walls[index].health = Mathf.Clamp(_walls[index].health, 0, 6);
+                if(_walls[index].health != 5 && _remainingToolbox > 0)
+                {
+                    // Update its health
+                    _walls[index].health++;
+                    _walls[index].health = Mathf.Clamp(_walls[index].health, 0, 5);
 
-                // TODO : Lose toolbox
+                    // Update its sprite accordingly to its health
+                    _wallsObjects[index].sprite = wallSpriteStatic[_walls[index].health];
+
+                    // Lose a toolbox
+                    _remainingToolbox--;
+                }
                 break;
             }
             index++;

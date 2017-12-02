@@ -14,13 +14,18 @@ public class WallBehavior : MonoBehaviour
 
     private void Repair()
     {
-        WearManager.RepairWall(gameObject);
+        if(isPlayerInZone)
+        {
+            print("Repair wall");
+            WearManager.RepairWall(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            print("IN ZONE");
             isPlayerInZone = true;
         }
     }
@@ -29,6 +34,7 @@ public class WallBehavior : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            print("END ZONE");
             isPlayerInZone = false;
         }
     }

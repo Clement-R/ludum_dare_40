@@ -47,8 +47,11 @@ public class HolderBehavior : MonoBehaviour {
             }
             else if (nearestBunny != null)
             {
-                // Grab nearest bunny if there is one
-                HoldObject(nearestBunny);
+                if(interactionController.GetIsInBunnyDropZone())
+                {
+                    // Grab nearest bunny if there is one
+                    HoldObject(nearestBunny);
+                }
             }
             else if(_holdedObject == null)
             {
