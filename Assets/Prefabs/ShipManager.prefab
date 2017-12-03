@@ -51,9 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968c7446a2e2c064fbd0c927b69a7acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxBunnies: 100
+  textBunnies: {fileID: 0}
+  scaleFactor: 0.5
   bunnyPrefab: {fileID: 1217166061105030, guid: ac2b4bf637fab5a4cb233a3a5a8a84d8,
     type: 2}
   bunnyTransform: {fileID: 0}
-  _startingNumberOfBunnies: 2
-  _reproductionCooldown: 2
-  _maxBunnies: 100
+  _startingNumberOfBunnies: 5

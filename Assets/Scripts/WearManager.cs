@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using pkm.EventManager;
 
 public class WearManager : MonoBehaviour {
@@ -11,7 +12,8 @@ public class WearManager : MonoBehaviour {
     }
     
     public float scaleFactor = 1f;
-
+    public Text textTools;
+    public Image toolsProgressBar;
 
     public List<SpriteRenderer> wallsObjects = new List<SpriteRenderer>();
     public Sprite[] wallSprite = new Sprite[6];
@@ -53,6 +55,12 @@ public class WearManager : MonoBehaviour {
         wallSpriteStatic = wallSprite;
 
         StartCoroutine(LoseWear());
+    }
+
+    private void Update()
+    {
+        toolsProgressBar.fillAmount = _remainingToolbox / (float) _maxToolboxStatic;
+        textTools.text = _remainingToolbox.ToString() + " / " + _maxToolboxStatic.ToString();
     }
 
     static public int GetRemainingToolbox()
