@@ -83,20 +83,28 @@ public class HolderBehavior : MonoBehaviour {
 
         if (interactionController.GetIsInDeliveryZone())
         {
-            // Check if the player doesn't already have max toolbox
-            if (WearManager.GetRemainingToolbox() != WearManager.GetMaxToolbox())
+            if(MamazonManager.IsShipAvailable())
             {
-                KillObject();
-                // Decrease bunny counter
-                EventManager.TriggerEvent("KillBunny");
-                // Add a toolbox
-                EventManager.TriggerEvent("UseDeliveryZone");
+                // Check if the player doesn't already have max toolbox
+                if (WearManager.GetRemainingToolbox() != WearManager.GetMaxToolbox())
+                {
+                    KillObject();
+                    // Decrease bunny counter
+                    EventManager.TriggerEvent("KillBunny");
+                    // Add a toolbox
+                    EventManager.TriggerEvent("UseDeliveryZone");
+                }
+                else
+                {
+                    print("full toolbox !!");
+                    // TODO : Feedback on already have max tools
+                }
             }
             else
             {
-                print("full toolbox !!");
-                // TODO : Feedback on already have max tools
+                print("Delivery zone not available");
             }
+            
         }
     }
 
