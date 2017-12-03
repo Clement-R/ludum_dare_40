@@ -6,7 +6,6 @@ using pkm.EventManager;
 
 public class ResourceManager : MonoBehaviour {
     public int maxBunnies = 100;
-    static public int maxBunniesStatic = 100;
 
     public Text textBunnies;
     public Image bunniesProgressBar;
@@ -17,15 +16,18 @@ public class ResourceManager : MonoBehaviour {
 
     [SerializeField]
     private int _startingNumberOfBunnies = 2;
-    static private int _bunnyCounter = 0;
+    private int _bunnyCounter = 0;
     
     private float _nextReproduction = 0.0f;
     private float _reproductionCooldown; // Change this value with a formula
     
+    public int GetBunnyCounter()
+    {
+        return _bunnyCounter;
+    }
+
     private void Start()
     {
-        maxBunniesStatic = maxBunnies;
-
         // Start listening to events
         EventManager.StartListening("KillBunny", KillBunny);
 
@@ -35,7 +37,7 @@ public class ResourceManager : MonoBehaviour {
             BunnyReproduction();
         }
 
-        _reproductionCooldown = (maxBunniesStatic / _bunnyCounter) * scaleFactor;
+        _reproductionCooldown = (maxBunnies / _bunnyCounter) * scaleFactor;
     }
 
     private void Update ()
@@ -47,12 +49,12 @@ public class ResourceManager : MonoBehaviour {
                 if (Time.time >= _nextReproduction)
                 {
                     BunnyReproduction();
-                    _reproductionCooldown = (maxBunniesStatic / _bunnyCounter) * scaleFactor;
+                    _reproductionCooldown = (maxBunnies / _bunnyCounter) * scaleFactor;
                     _nextReproduction = Time.time + _reproductionCooldown;
                 }
             }
 
-            if (_bunnyCounter >= maxBunniesStatic && Time.timeScale > 0)
+            if (_bunnyCounter >= maxBunnies && Time.timeScale > 0)
             {
                 EventManager.TriggerEvent("LoseBunny");
             }
@@ -62,13 +64,13 @@ public class ResourceManager : MonoBehaviour {
                 EventManager.TriggerEvent("LoseBunnyNone");
             }
 
-            print(_bunnyCounter / maxBunniesStatic);
-            bunniesProgressBar.fillAmount = _bunnyCounter / (float)maxBunniesStatic;
-            textBunnies.text = _bunnyCounter.ToString() + " / " + maxBunniesStatic.ToString();
+            print(_bunnyCounter / maxBunnies);
+            bunniesProgressBar.fillAmount = _bunnyCounter / (float)maxBunnies;
+            textBunnies.text = _bunnyCounter.ToString() + " / " + maxBunnies.ToString();
         }
     }
 
-    static public int GetNumberOfBunnies()
+    public int GetNumberOfBunnies()
     {
         return _bunnyCounter;
     }

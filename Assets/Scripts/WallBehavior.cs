@@ -5,6 +5,8 @@ using pkm.EventManager;
 
 public class WallBehavior : MonoBehaviour
 {
+    public WearManager wm;
+
     private bool isPlayerInZone = false;
 
     private void Start()
@@ -16,7 +18,7 @@ public class WallBehavior : MonoBehaviour
     {
         if(isPlayerInZone)
         {
-            WearManager.RepairWall(gameObject);
+            wm.RepairWall(gameObject);
         }
     }
 

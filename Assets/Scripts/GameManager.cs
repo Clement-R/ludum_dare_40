@@ -4,6 +4,8 @@ using UnityEngine;
 using pkm.EventManager;
 
 public class GameManager : MonoBehaviour {
+    public TutorialManager tutorialManager;
+    public GameObject gameOverMenu;
 
     private static bool _pause = false;
 
@@ -14,10 +16,12 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
-        if(TutorialManager.IsTutorialFinished())
+        if(tutorialManager.IsTutorialFinished())
         {
             Time.timeScale = 1f;
         }
+
+        _pause = false;
     }
 
     private void Start () {
@@ -47,6 +51,7 @@ public class GameManager : MonoBehaviour {
 
     private void Lose()
     {
+        gameOverMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 

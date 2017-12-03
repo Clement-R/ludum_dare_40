@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour {
 
-	public void GoToScene(string sceneName)
+    private void Start()
+    {
+        AkSoundEngine.PostEvent("Play_menu_music", gameObject);
+    }
+
+    public void GoToScene(string sceneName)
     {
         if(sceneName == "game")
         {

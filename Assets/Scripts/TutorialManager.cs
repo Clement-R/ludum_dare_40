@@ -7,11 +7,11 @@ public class TutorialManager : MonoBehaviour {
 
     public GameObject[] tutorialObjects;
 
-    static private bool _isTutorialFinished = false;
+    private bool _isTutorialFinished = false;
     private int actualIndex = 0;
     private GameObject actualSlide;
 
-    static public bool IsTutorialFinished()
+    public bool IsTutorialFinished()
     {
         return _isTutorialFinished;
     }

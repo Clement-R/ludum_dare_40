@@ -10,80 +10,67 @@ public class WearManager : MonoBehaviour {
     {
         public int health;
     }
-    
+
+    public ResourceManager resourceManager;
     public float scaleFactor = 1f;
     public Text textTools;
     public Image toolsProgressBar;
 
     public List<SpriteRenderer> wallsObjects = new List<SpriteRenderer>();
     public Sprite[] wallSprite = new Sprite[6];
-
-    static private List<SpriteRenderer> _wallsObjects = new List<SpriteRenderer>();
-    private static Sprite[] wallSpriteStatic = new Sprite[6];
-    private static Wall[] _walls = new Wall[4];
+    
+    private Wall[] _walls = new Wall[4];
     private float _timeBeforeDecrease;
 
 
     [SerializeField]
     private int _maxToolbox = 5;
-    static private int _maxToolboxStatic = 5;
-    static private int _remainingToolbox;
-    
+    private int _remainingToolbox;
+
+    public int GetRemainingToolbox()
+    {
+        return _remainingToolbox;
+    }
 
     private void Start()
     {
-        _maxToolboxStatic = _maxToolbox;
-
-        foreach (var wall in wallsObjects)
-        {
-            _wallsObjects.Add(wall.GetComponent<SpriteRenderer>());
-        }
-
         // Create logical walls
         for (int i = 0; i < 4; i++)
         {
             _walls[i] = new Wall();
             _walls[i].health = 5;
-            _wallsObjects[i].sprite = wallSprite[5];
+            wallsObjects[i].sprite = wallSprite[5];
         }
-
-        // _remainingToolbox = _maxToolboxStatic;
+        
         _remainingToolbox = 1;
 
-        _timeBeforeDecrease = (ResourceManager.maxBunniesStatic / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
-
-        wallSpriteStatic = wallSprite;
+        _timeBeforeDecrease = (resourceManager.maxBunnies / (float)resourceManager.GetNumberOfBunnies()) * scaleFactor;
 
         StartCoroutine(LoseWear());
     }
 
     private void Update()
     {
-        toolsProgressBar.fillAmount = _remainingToolbox / (float) _maxToolboxStatic;
-        textTools.text = _remainingToolbox.ToString() + " / " + _maxToolboxStatic.ToString();
+        toolsProgressBar.fillAmount = _remainingToolbox / (float) _maxToolbox;
+        textTools.text = _remainingToolbox.ToString() + " / " + _maxToolbox.ToString();
     }
 
-    static public int GetRemainingToolbox()
+    public int GetMaxToolbox()
     {
-        return _remainingToolbox;
+        return _maxToolbox;
     }
 
-    static public int GetMaxToolbox()
-    {
-        return _maxToolboxStatic;
-    }
-
-    public static void GainToolbox()
+    public void GainToolbox()
     {
         AkSoundEngine.PostEvent("Play_metal", Camera.main.gameObject);
         _remainingToolbox++;
-        _remainingToolbox = Mathf.Clamp(_remainingToolbox, 0, _maxToolboxStatic);
+        _remainingToolbox = Mathf.Clamp(_remainingToolbox, 0, _maxToolbox);
     }
 
-    public static void RepairWall(GameObject wall)
+    public void RepairWall(GameObject wall)
     {
         int index = 0;
-        foreach (var wallObject in _wallsObjects)
+        foreach (var wallObject in wallsObjects)
         {
             // Find the wall in our walls
             if (wallObject.gameObject.GetInstanceID() == wall.GetInstanceID())
@@ -95,9 +82,9 @@ public class WearManager : MonoBehaviour {
                     _walls[index].health = Mathf.Clamp(_walls[index].health, 0, 5);
 
                     // Update its sprite accordingly to its health
-                    _wallsObjects[index].sprite = wallSpriteStatic[_walls[index].health];
+                    wallsObjects[index].sprite = wallSprite[_walls[index].health];
 
-                    AkSoundEngine.PostEvent("Play_reparation", _wallsObjects[index].gameObject);
+                    AkSoundEngine.PostEvent("Play_reparation", wallsObjects[index].gameObject);
 
                     // Lose a toolbox
                     _remainingToolbox--;
@@ -142,9 +129,9 @@ public class WearManager : MonoBehaviour {
         }
 
         // Change its sprite according to its health
-        _wallsObjects[wallIndex].sprite = wallSprite[_walls[wallIndex].health];
+        wallsObjects[wallIndex].sprite = wallSprite[_walls[wallIndex].health];
 
-        _timeBeforeDecrease = (ResourceManager.maxBunniesStatic / (float)ResourceManager.GetNumberOfBunnies()) * scaleFactor;
+        _timeBeforeDecrease = (resourceManager.maxBunnies / (float)resourceManager.GetNumberOfBunnies()) * scaleFactor;
         StartCoroutine(LoseWear());
     }
 }

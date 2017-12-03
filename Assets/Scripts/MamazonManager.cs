@@ -9,6 +9,7 @@ public class MamazonManager : MonoBehaviour {
     public Text bunnyCounterUI;
     public Text remainingTimeUI;
     public Animator mamazonSignal;
+    public WearManager wearManager;
 
     [SerializeField]
     private int _maxBunniesInDelivery = 10;
@@ -18,13 +19,18 @@ public class MamazonManager : MonoBehaviour {
     private float _deliveryCooldown = 20f;
     private float _nextDeliveryTime = 0f;
 
-    static private int _bunniesInCurrentDelivery = 0;
-    static private bool _isShipAvailable = false;
+    private int _bunniesInCurrentDelivery = 0;
+    private bool _isShipAvailable = false;
     private float _remainingDeliveryTime = 0f;
 
-    public static bool IsShipAvailable()
+    public bool IsShipAvailable()
     {
         return _isShipAvailable;
+    }
+
+    public int GetBunniesInCurrentDelivery()
+    {
+        return _bunniesInCurrentDelivery;
     }
 
     private void Start ()
@@ -44,7 +50,7 @@ public class MamazonManager : MonoBehaviour {
             _bunniesInCurrentDelivery++;
             // Increase HUD bunny counter
             bunnyCounterUI.text = _bunniesInCurrentDelivery.ToString();
-            WearManager.GainToolbox();
+            wearManager.GainToolbox();
 
             gameObject.transform.GetChild(0).GetChild(0).GetComponent<Animator>().SetTrigger("putRabbit");
         }

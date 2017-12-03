@@ -4,6 +4,8 @@ using UnityEngine;
 using pkm.EventManager;
 
 public class HolderBehavior : MonoBehaviour {
+    public MamazonManager mamazon;
+    public WearManager wearManager;
 
     public Sprite idleSprite;
     public Sprite holdingSprite;
@@ -96,10 +98,10 @@ public class HolderBehavior : MonoBehaviour {
 
         if (interactionController.GetIsInDeliveryZone())
         {
-            if(MamazonManager.IsShipAvailable())
+            if(mamazon.IsShipAvailable())
             {
                 // Check if the player doesn't already have max toolbox
-                if (WearManager.GetRemainingToolbox() != WearManager.GetMaxToolbox())
+                if (wearManager.GetRemainingToolbox() != wearManager.GetMaxToolbox())
                 {
                     KillObject();
                     // Decrease bunny counter

@@ -7,6 +7,7 @@ using pkm.EventManager;
 public class MotorBehavior : MonoBehaviour {
 
     # region PUBLIC_VARIABLES
+    public BackgroundSwaper backgroundManager;
     public Sprite[] motorLevelSprites;
     public Text textScore;
 
@@ -134,7 +135,7 @@ public class MotorBehavior : MonoBehaviour {
             // Update distance meter
             distanceText.text = Mathf.FloorToInt(distanceDelta).ToString();
 
-            BackgroundSwaper.ChangeBackgroundSpeed(_cappedSpeed);
+            backgroundManager.ChangeBackgroundSpeed(_cappedSpeed);
         }
     }
 

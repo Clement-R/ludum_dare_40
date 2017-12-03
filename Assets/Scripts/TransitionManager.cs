@@ -62,6 +62,7 @@ public class TransitionManager : MonoBehaviour {
             yield return null;
         }
 
+        
         ao.allowSceneActivation = true;
 
         t = 0f;
