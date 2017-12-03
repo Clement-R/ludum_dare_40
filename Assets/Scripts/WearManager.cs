@@ -20,15 +20,18 @@ public class WearManager : MonoBehaviour {
     private static Sprite[] wallSpriteStatic = new Sprite[6];
     private static Wall[] _walls = new Wall[4];
     private float _timeBeforeDecrease;
-    
+
 
     [SerializeField]
-    static private int _maxToolbox = 5;
+    private int _maxToolbox = 5;
+    static private int _maxToolboxStatic = 5;
     static private int _remainingToolbox;
     
 
     private void Start()
     {
+        _maxToolboxStatic = _maxToolbox;
+
         foreach (var wall in wallsObjects)
         {
             _wallsObjects.Add(wall.GetComponent<SpriteRenderer>());
@@ -42,7 +45,7 @@ public class WearManager : MonoBehaviour {
             _wallsObjects[i].sprite = wallSprite[5];
         }
 
-        _remainingToolbox = _maxToolbox;
+        _remainingToolbox = _maxToolboxStatic;
 
         _timeBeforeDecrease = (ResourceManager.maxBunnies / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
 
@@ -51,15 +54,20 @@ public class WearManager : MonoBehaviour {
         StartCoroutine(LoseWear());
     }
 
-    public int GetRemainingToolbox()
+    static public int GetRemainingToolbox()
     {
         return _remainingToolbox;
+    }
+
+    static public int GetMaxToolbox()
+    {
+        return _maxToolboxStatic;
     }
 
     public static void GainToolbox()
     {
         _remainingToolbox++;
-        _remainingToolbox = Mathf.Clamp(_remainingToolbox, 0, _maxToolbox);
+        _remainingToolbox = Mathf.Clamp(_remainingToolbox, 0, _maxToolboxStatic);
     }
 
     public static void RepairWall(GameObject wall)

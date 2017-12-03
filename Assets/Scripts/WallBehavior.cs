@@ -25,7 +25,6 @@ public class WallBehavior : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            print("IN ZONE");
             isPlayerInZone = true;
         }
     }
@@ -34,7 +33,6 @@ public class WallBehavior : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            print("END ZONE");
             isPlayerInZone = false;
         }
     }
