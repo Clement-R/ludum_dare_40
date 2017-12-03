@@ -61,10 +61,6 @@ public class MotorBehavior : MonoBehaviour {
         _motorTube = transform.GetChild(1).GetComponent<Animator>();
         _copDistance = _initialCopDistance;
 
-        // UI
-        // copMeterPosition = copMeter.transform.position.x;
-        // distanceMeterPosition = distanceMeter.transform.position.x;
-
         StartCoroutine(PlayLowSpeedSound());
     }
 
@@ -83,59 +79,65 @@ public class MotorBehavior : MonoBehaviour {
 
     private void Update ()
     {
-        // Update speed and clamp it
-        _speed -= _decreaseRate;
-        _speed = Mathf.Clamp(_speed, 0, _maxSpeed);
+        if(!GameManager.IsGamePaused())
+        {
+            // Update speed and clamp it
+            _speed -= _decreaseRate;
+            _speed = Mathf.Clamp(_speed, 0, _maxSpeed);
 
-        // Get capped speed
-        _cappedSpeed = Mathf.CeilToInt(_speed / 100f);
-        
-        // Update motor level sprite
-        if(_cappedSpeed - 1 >= 0)
-        {
-            _motorLevelSr.sprite = motorLevelSprites[_cappedSpeed - 1];
-        } else
-        {
-            _motorLevelSr.sprite = null;
+            // Get capped speed
+            _cappedSpeed = Mathf.CeilToInt(_speed / 100f);
+
+            // Update motor level sprite
+            if (_cappedSpeed - 1 >= 0)
+            {
+                _motorLevelSr.sprite = motorLevelSprites[_cappedSpeed - 1];
+            }
+            else
+            {
+                _motorLevelSr.sprite = null;
+            }
+
+            // Update motor level sound
+            print((_cappedSpeed * 100) / 6f);
+            AkSoundEngine.SetRTPCValue("speed_vaisseau", (_cappedSpeed * 100) / 6f);
+
+            // Update distances
+            _distance += _speed;
+            _copDistance += _copSpeed;
+
+            // Get the delta between the player speed and the cop speed
+            float distanceDelta = _distance - _copDistance;
+            if (distanceDelta < 0f)
+            {
+                distanceDelta = 0f;
+            }
+
+            // If distance == 0 then the player lose
+            if (distanceDelta <= 0f && Time.timeScale > 0)
+            {
+                EventManager.TriggerEvent("LoseCop");
+            }
+
+            if (distanceDelta <= (300 * 60 * 7) && Time.timeScale > 0)
+            {
+                AkSoundEngine.PostEvent("Play_police", gameObject);
+            }
+            else
+            {
+                AkSoundEngine.PostEvent("Stop_police", gameObject);
+            }
+
+            // Update text score
+            textScore.text = (_distance - _initialDistance).ToString();
+
+            // Update distance meter
+            distanceText.text = Mathf.FloorToInt(distanceDelta).ToString();
+
+            BackgroundSwaper.ChangeBackgroundSpeed(_cappedSpeed);
+
+            print("Euh lol ?");
         }
-
-        // Update motor level sound
-        print((_cappedSpeed * 100) / 6f);
-        AkSoundEngine.SetRTPCValue("speed_vaisseau", (_cappedSpeed * 100) / 6f);
-
-        // Update distances
-        _distance += _speed;
-        _copDistance += _copSpeed;
-
-        // Get the delta between the player speed and the cop speed
-        float distanceDelta = _distance - _copDistance;
-        if(distanceDelta < 0f)
-        {
-            distanceDelta = 0f;
-        }
-
-        // If distance == 0 then the player lose
-        if (distanceDelta <= 0f && Time.timeScale > 0)
-        {
-            EventManager.TriggerEvent("LoseCop");
-        }
-
-        if(distanceDelta <= (300 * 60 * 7) && Time.timeScale > 0)
-        {
-            AkSoundEngine.PostEvent("Play_police", gameObject);
-        }
-        else
-        {
-            AkSoundEngine.PostEvent("Stop_police", gameObject);
-        }
-
-        // Update text score
-        textScore.text = (_distance - _initialDistance).ToString();
-
-        // Update distance meter
-        distanceText.text = Mathf.FloorToInt(distanceDelta).ToString();
-
-        BackgroundSwaper.ChangeBackgroundSpeed(_cappedSpeed);
     }
 
     private void AddPower()

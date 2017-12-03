@@ -40,29 +40,32 @@ public class ResourceManager : MonoBehaviour {
 
     private void Update ()
     {
-        if (_bunnyCounter >= 2)
+        if (!GameManager.IsGamePaused())
         {
-            if(Time.time >= _nextReproduction)
+            if (_bunnyCounter >= 2)
             {
-                BunnyReproduction();
-                _reproductionCooldown = (maxBunniesStatic / _bunnyCounter) * scaleFactor;
-                _nextReproduction = Time.time + _reproductionCooldown;
+                if (Time.time >= _nextReproduction)
+                {
+                    BunnyReproduction();
+                    _reproductionCooldown = (maxBunniesStatic / _bunnyCounter) * scaleFactor;
+                    _nextReproduction = Time.time + _reproductionCooldown;
+                }
             }
-        }
 
-        if(_bunnyCounter >= maxBunniesStatic && Time.timeScale > 0)
-        {
-            EventManager.TriggerEvent("LoseBunny");
-        }
+            if (_bunnyCounter >= maxBunniesStatic && Time.timeScale > 0)
+            {
+                EventManager.TriggerEvent("LoseBunny");
+            }
 
-        if (_bunnyCounter == 0 && Time.timeScale > 0)
-        {
-            EventManager.TriggerEvent("LoseBunnyNone");
-        }
+            if (_bunnyCounter == 0 && Time.timeScale > 0)
+            {
+                EventManager.TriggerEvent("LoseBunnyNone");
+            }
 
-        print(_bunnyCounter / maxBunniesStatic);
-        bunniesProgressBar.fillAmount = _bunnyCounter / (float) maxBunniesStatic;
-        textBunnies.text = _bunnyCounter.ToString() + " / " + maxBunniesStatic.ToString();
+            print(_bunnyCounter / maxBunniesStatic);
+            bunniesProgressBar.fillAmount = _bunnyCounter / (float)maxBunniesStatic;
+            textBunnies.text = _bunnyCounter.ToString() + " / " + maxBunniesStatic.ToString();
+        }
     }
 
     static public int GetNumberOfBunnies()

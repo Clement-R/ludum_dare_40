@@ -110,7 +110,6 @@ public class WearManager : MonoBehaviour {
 
     IEnumerator LoseWear()
     {
-        print(_timeBeforeDecrease);
         yield return new WaitForSeconds(_timeBeforeDecrease);
 
         // Find wall with the biggest health

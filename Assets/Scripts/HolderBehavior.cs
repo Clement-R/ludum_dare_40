@@ -28,44 +28,47 @@ public class HolderBehavior : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        // Find nearest bunny
-        float nearestDistance = _grabRadius;
-        GameObject nearestBunny = null;
-        foreach (var bunny in GameObject.FindGameObjectsWithTag("Bunny"))
+        if(!GameManager.IsGamePaused())
         {
-            float bunnyDistance = Vector2.Distance(bunny.transform.position, transform.position);
-            if (bunnyDistance < nearestDistance)
+            // Find nearest bunny
+            float nearestDistance = _grabRadius;
+            GameObject nearestBunny = null;
+            foreach (var bunny in GameObject.FindGameObjectsWithTag("Bunny"))
             {
-                nearestDistance = bunnyDistance;
-                nearestBunny = bunny.gameObject;
-            }
-        }
-        
-        if(Input.GetMouseButtonDown(0))
-        {
-            // If we can drop a bunny
-            if (CanDropBunny())
-            {
-                if(interactionController.GetIsInBunnyDropZone())
+                float bunnyDistance = Vector2.Distance(bunny.transform.position, transform.position);
+                if (bunnyDistance < nearestDistance)
                 {
-                    DropObject();
-                }
-                else if (interactionController.GetIsInMotorZone() || interactionController.GetIsInDeliveryZone())
-                {
-                    UseBunny();
+                    nearestDistance = bunnyDistance;
+                    nearestBunny = bunny.gameObject;
                 }
             }
-            else if (nearestBunny != null)
+
+            if (Input.GetMouseButtonDown(0))
             {
-                if(interactionController.GetIsInBunnyDropZone())
+                // If we can drop a bunny
+                if (CanDropBunny())
                 {
-                    // Grab nearest bunny if there is one
-                    HoldObject(nearestBunny);
+                    if (interactionController.GetIsInBunnyDropZone())
+                    {
+                        DropObject();
+                    }
+                    else if (interactionController.GetIsInMotorZone() || interactionController.GetIsInDeliveryZone())
+                    {
+                        UseBunny();
+                    }
                 }
-            }
-            else if(_holdedObject == null)
-            {
-                UseZone();
+                else if (nearestBunny != null)
+                {
+                    if (interactionController.GetIsInBunnyDropZone())
+                    {
+                        // Grab nearest bunny if there is one
+                        HoldObject(nearestBunny);
+                    }
+                }
+                else if (_holdedObject == null)
+                {
+                    UseZone();
+                }
             }
         }
     }

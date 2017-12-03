@@ -5,17 +5,44 @@ using pkm.EventManager;
 
 public class GameManager : MonoBehaviour {
 
+    private static bool _pause = false;
+
+    public static bool IsGamePaused()
+    {
+        return _pause;
+    }
+
     private void Awake()
     {
-        AkSoundEngine.SetState("pause", "None");
-        AkSoundEngine.PostEvent("Play_game_music", gameObject);
+        if(TutorialManager.IsTutorialFinished())
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     private void Start () {
+        EventManager.StartListening("Pause", Pause);
+        EventManager.StartListening("Resume", Resume);
+
         EventManager.StartListening("LoseBunny", LoseByBunny);
         EventManager.StartListening("LoseWear", LoseByWear);
         EventManager.StartListening("LoseCop", LoseByCop);
         EventManager.StartListening("LoseBunnyNone", LoseByBunnyNone);
+
+        AkSoundEngine.SetState("pause", "None");
+        AkSoundEngine.PostEvent("Play_game_music", gameObject);
+    }
+
+    private void Pause()
+    {
+        Time.timeScale = 0f;
+        _pause = true;
+    }
+
+    private void Resume()
+    {
+        Time.timeScale = 1f;
+        _pause = false;
     }
 
     private void Lose()

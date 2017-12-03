@@ -79,8 +79,12 @@ public class MamazonManager : MonoBehaviour {
         // Wait for delivery duration
         while (_remainingDeliveryTime >= 0)
         {
-            _remainingDeliveryTime -= Time.deltaTime;
-            remainingTimeUI.text = Mathf.CeilToInt(_remainingDeliveryTime).ToString();
+            if (!GameManager.IsGamePaused())
+            {
+                _remainingDeliveryTime -= Time.deltaTime;
+                remainingTimeUI.text = Mathf.CeilToInt(_remainingDeliveryTime).ToString();
+            }
+
             yield return null;
         }
         
