@@ -5,15 +5,25 @@ using pkm.EventManager;
 
 public class HolderBehavior : MonoBehaviour {
 
+    public Sprite idleSprite;
+    public Sprite holdingSprite;
+
     [SerializeField]
     private float _grabRadius = 150f;
 
     private GameObject _holdedObject = null;
     private InteractController interactionController;
 
+    private SpriteRenderer _sr;
+
     private void Awake()
     {
         interactionController = GetComponent<InteractController>();
+    }
+
+    private void Start()
+    {
+        _sr = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -127,6 +137,9 @@ public class HolderBehavior : MonoBehaviour {
     private void KillObject()
     {
         Destroy(_holdedObject);
+
+        _sr.sprite = idleSprite;
+
         _holdedObject = null;
     }
 
@@ -136,6 +149,8 @@ public class HolderBehavior : MonoBehaviour {
         _holdedObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         _holdedObject.transform.parent = null;
 
+        _sr.sprite = idleSprite;
+
         _holdedObject = null;
     }
 
@@ -144,6 +159,8 @@ public class HolderBehavior : MonoBehaviour {
         holdedObject.transform.parent = transform.GetChild(0).transform;
         holdedObject.GetComponent<Rigidbody2D>().simulated = false;
         holdedObject.transform.position = transform.GetChild(0).transform.position;
+
+        _sr.sprite = holdingSprite;
 
         _holdedObject = holdedObject;
     }
