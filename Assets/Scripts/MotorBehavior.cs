@@ -135,6 +135,9 @@ public class MotorBehavior : MonoBehaviour {
             distanceText.text = Mathf.FloorToInt(distanceDelta).ToString();
 
             backgroundManager.ChangeBackgroundSpeed(_cappedSpeed);
+
+            // TODO : Toggle an icon when there is 2 level of motor
+            // TODO : Show a danger sign when distance is close (cop sound)
         }
     }
 
