@@ -100,7 +100,6 @@ public class MotorBehavior : MonoBehaviour {
             }
 
             // Update motor level sound
-            print((_cappedSpeed * 100) / 6f);
             AkSoundEngine.SetRTPCValue("speed_vaisseau", (_cappedSpeed * 100) / 6f);
 
             // Update distances

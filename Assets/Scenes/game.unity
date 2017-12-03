@@ -1097,6 +1097,16 @@ Prefab:
       propertyPath: wm
       value: 
       objectReference: {fileID: 1681829608}
+    - target: {fileID: 61386925406901042, guid: 5a12ccdbbd318e146bd13e57355e903a,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 89.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 61386925406901042, guid: 5a12ccdbbd318e146bd13e57355e903a,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -34.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a12ccdbbd318e146bd13e57355e903a, type: 2}
   m_IsPrefabParent: 0
@@ -2552,11 +2562,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4030629066192442, guid: bc7a4b44ec3bc834690c7200574199bc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 406
+      value: -114
       objectReference: {fileID: 0}
     - target: {fileID: 4030629066192442, guid: bc7a4b44ec3bc834690c7200574199bc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 48
+      value: -263.2
       objectReference: {fileID: 0}
     - target: {fileID: 4030629066192442, guid: bc7a4b44ec3bc834690c7200574199bc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3205,7 +3215,7 @@ Prefab:
     - target: {fileID: 114812284772662548, guid: f99400c1692f15b42a274cfe40aa7373,
         type: 2}
       propertyPath: _decreasePerSecond
-      value: 100000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114812284772662548, guid: f99400c1692f15b42a274cfe40aa7373,
         type: 2}
@@ -4137,7 +4147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceManager: {fileID: 1859447561}
-  scaleFactor: 1
+  scaleFactor: 0.1
   textTools: {fileID: 591457472}
   toolsProgressBar: {fileID: 68552646}
   wallsObjects:

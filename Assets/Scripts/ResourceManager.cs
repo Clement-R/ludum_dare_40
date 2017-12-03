@@ -64,7 +64,6 @@ public class ResourceManager : MonoBehaviour {
                 EventManager.TriggerEvent("LoseBunnyNone");
             }
 
-            print(_bunnyCounter / maxBunnies);
             bunniesProgressBar.fillAmount = _bunnyCounter / (float)maxBunnies;
             textBunnies.text = _bunnyCounter.ToString() + " / " + maxBunnies.ToString();
         }

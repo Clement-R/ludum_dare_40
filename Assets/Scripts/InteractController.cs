@@ -52,6 +52,7 @@ public class InteractController : MonoBehaviour {
                 break;
 
             case "Wall":
+                print("WALL");
                 _isInWallZone = true;
                 break;
 
@@ -74,6 +75,10 @@ public class InteractController : MonoBehaviour {
                 break;
 
             case "RepairRoom":
+                _isInRepairZone = false;
+                break;
+
+            case "Wall":
                 _isInWallZone = false;
                 break;
 

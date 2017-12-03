@@ -66,6 +66,10 @@ public class HolderBehavior : MonoBehaviour {
                         // Grab nearest bunny if there is one
                         HoldObject(nearestBunny);
                     }
+                    else
+                    {
+                        UseZone();
+                    }
                 }
                 else if (_holdedObject == null)
                 {
