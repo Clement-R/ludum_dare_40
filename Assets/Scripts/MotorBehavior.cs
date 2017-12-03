@@ -9,9 +9,17 @@ public class MotorBehavior : MonoBehaviour {
     # region PUBLIC_VARIABLES
     public Sprite[] motorLevelSprites;
     public Text textScore;
+
+    public Image copMeter;
+    public Image distanceMeter;
+    public Text distanceText;
     #endregion PUBLIC_VARIABLES
 
     #region PRIVATE_VARIABLES
+    [Header("UI")]
+    private float copMeterPosition;
+    private float distanceMeterPosition;
+
     [Header("Speed")]
     [SerializeField]
     private int _maxSpeed = 600;
@@ -52,18 +60,10 @@ public class MotorBehavior : MonoBehaviour {
         _motorLevelSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         _motorTube = transform.GetChild(1).GetComponent<Animator>();
         _copDistance = _initialCopDistance;
-    }
-	
-    private void AddPower()
-    {
-        _speed += _bunnyPower;
-        _speed = Mathf.Clamp(_speed, 0, _maxSpeed);
 
-        // TODO : play particle system
-        GetComponentInChildren<ParticleSystem>().Play();
-        // TODO : play sound
-        // TODO : play tube animation
-        _motorTube.SetTrigger("put_RABBIT");
+        // UI
+        // copMeterPosition = copMeter.transform.position.x;
+        // distanceMeterPosition = distanceMeter.transform.position.x;
     }
 
     private void Update ()
@@ -99,5 +99,21 @@ public class MotorBehavior : MonoBehaviour {
 
         // Update text score
         textScore.text = (_distance - _initialDistance).ToString();
+
+        // Update distance meter
+        distanceText.text = Mathf.FloorToInt(distanceDelta).ToString();
+
+        BackgroundSwaper.ChangeBackgroundSpeed(_cappedSpeed);
+    }
+
+    private void AddPower()
+    {
+        _speed += _bunnyPower;
+        _speed = Mathf.Clamp(_speed, 0, _maxSpeed);
+
+        // Feedbacks
+        GetComponentInChildren<ParticleSystem>().Play();
+        // TODO : play sound
+        _motorTube.SetTrigger("put_RABBIT");
     }
 }

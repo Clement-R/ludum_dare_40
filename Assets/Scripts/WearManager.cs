@@ -77,7 +77,6 @@ public class WearManager : MonoBehaviour {
     {
         _remainingToolbox++;
         _remainingToolbox = Mathf.Clamp(_remainingToolbox, 0, _maxToolboxStatic);
-        // TODO : Increase HUD toolbox counter
     }
 
     public static void RepairWall(GameObject wall)
