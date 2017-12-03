@@ -7,6 +7,7 @@ TagManager:
   - Bunny
   - BunnyWall
   - InteractZone
+  - transition_screen
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: walls
     uniqueID: 3516785427
+    locked: 0
+  - name: transition
+    uniqueID: 4033821161
     locked: 0
