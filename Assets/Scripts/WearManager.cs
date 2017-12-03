@@ -47,7 +47,7 @@ public class WearManager : MonoBehaviour {
 
         _remainingToolbox = _maxToolboxStatic;
 
-        _timeBeforeDecrease = (ResourceManager.maxBunnies / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
+        _timeBeforeDecrease = (ResourceManager.maxBunniesStatic / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
 
         wallSpriteStatic = wallSprite;
 
@@ -128,7 +128,7 @@ public class WearManager : MonoBehaviour {
         // Change its sprite according to its health
         _wallsObjects[wallIndex].sprite = wallSprite[_walls[wallIndex].health];
 
-        _timeBeforeDecrease = (ResourceManager.maxBunnies / (float)ResourceManager.GetNumberOfBunnies()) * scaleFactor;
+        _timeBeforeDecrease = (ResourceManager.maxBunniesStatic / (float)ResourceManager.GetNumberOfBunnies()) * scaleFactor;
         StartCoroutine(LoseWear());
     }
 }

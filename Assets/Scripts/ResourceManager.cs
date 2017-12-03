@@ -4,8 +4,10 @@ using UnityEngine;
 using pkm.EventManager;
 
 public class ResourceManager : MonoBehaviour {
-    static public int maxBunnies = 100;
+    public int maxBunnies = 100;
+    static public int maxBunniesStatic = 100;
 
+    public float scaleFactor = 1f;
     public GameObject bunnyPrefab;
     public GameObject bunnyTransform;
 
@@ -14,11 +16,12 @@ public class ResourceManager : MonoBehaviour {
     static private int _bunnyCounter = 0;
     
     private float _nextReproduction = 0.0f;
-    [SerializeField]
-    private float _reproductionCooldown = 2f; // Change this value with a formula
+    private float _reproductionCooldown; // Change this value with a formula
     
     private void Start()
     {
+        maxBunniesStatic = maxBunnies;
+
         // Start listening to events
         EventManager.StartListening("KillBunny", KillBunny);
 
@@ -27,20 +30,25 @@ public class ResourceManager : MonoBehaviour {
         {
             BunnyReproduction();
         }
+
+        _reproductionCooldown = (maxBunniesStatic / _bunnyCounter) * scaleFactor;
     }
 
     private void Update ()
     {
+        print(_reproductionCooldown);
+
         if (_bunnyCounter >= 2)
         {
             if(Time.time >= _nextReproduction)
             {
                 BunnyReproduction();
+                _reproductionCooldown = (maxBunniesStatic / _bunnyCounter) * scaleFactor;
                 _nextReproduction = Time.time + _reproductionCooldown;
             }
         }
 
-        if(_bunnyCounter >= maxBunnies)
+        if(_bunnyCounter >= maxBunniesStatic)
         {
             EventManager.TriggerEvent("LoseBunny");
         }

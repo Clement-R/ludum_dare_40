@@ -47,3 +47,6 @@ TagManager:
   - name: motor_level
     uniqueID: 1683389927
     locked: 0
+  - name: walls
+    uniqueID: 3516785427
+    locked: 0

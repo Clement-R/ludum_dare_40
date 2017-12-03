@@ -7,14 +7,31 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        EventManager.StartListening("LoseBunny", Lose);
-        EventManager.StartListening("LoseWear", Lose);
-        EventManager.StartListening("LoseCop", Lose);
+        EventManager.StartListening("LoseBunny", LoseByBunny);
+        EventManager.StartListening("LoseWear", LoseByWear);
+        EventManager.StartListening("LoseCop", LoseByCop);
     }
 
     private void Lose()
     {
-        Debug.Log("You lose.");
         Time.timeScale = 0f;
+    }
+
+    private void LoseByBunny()
+    {
+        Debug.Log("You lose by too much bunnies.");
+        Lose();
+    }
+
+    private void LoseByWear()
+    {
+        Debug.Log("You lose by wear.");
+        Lose();
+    }
+
+    private void LoseByCop()
+    {
+        Debug.Log("You lose by cop.");
+        Lose();
     }
 }
