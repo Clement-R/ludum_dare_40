@@ -135,8 +135,6 @@ public class MotorBehavior : MonoBehaviour {
             distanceText.text = Mathf.FloorToInt(distanceDelta).ToString();
 
             BackgroundSwaper.ChangeBackgroundSpeed(_cappedSpeed);
-
-            print("Euh lol ?");
         }
     }
 
