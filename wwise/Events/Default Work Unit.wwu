@@ -1,6 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}" SchemaVersion="80">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_moteur" ID="{E7A1CE2E-0DF7-49C3-82FB-ACAB0A144201}">
+					<ChildrenList>
+						<Action Name="" ID="{449B6F75-FFF5-4B53-8733-C4B5FEF086C1}" ShortID="674228197">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="motor" ID="{602A7E67-B769-47E3-AE2C-001D9927EBBF}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_jetpack" ID="{6E3D33A8-17E2-4AD3-ADD4-042810BFD64A}">
+					<ChildrenList>
+						<Action Name="" ID="{3DBBB631-6E17-43D0-8FA7-516436F324C4}" ShortID="900191597">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="jetpack" ID="{517FCF66-2BF2-41D9-A384-4A5E5394C1C0}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_reproduction" ID="{7C2A8408-882A-4F80-8332-4C52C04729EB}">
+					<ChildrenList>
+						<Action Name="" ID="{6FAFB01D-4595-4367-956A-35EF2DC9D7A6}" ShortID="724802300">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="reproduction" ID="{6A728CD6-8B98-4715-A7F1-98C5A6DBC0AD}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_action_lapin" ID="{47278591-4769-43A9-B32C-F292F3883FF8}">
+					<ChildrenList>
+						<Action Name="" ID="{E52AF75E-4E4D-450C-95C5-E5F5696EAC06}" ShortID="416710309">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="action_lapin" ID="{6829A9A0-28DA-486A-B037-FDF6A56BC7CB}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_reparation" ID="{B10CD4A6-8C6B-4540-A2D8-F459FAD2FCF4}">
+					<ChildrenList>
+						<Action Name="" ID="{2BF30842-5741-4276-BA8B-A72063F746F4}" ShortID="241995908">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="reparation" ID="{B7C7DE12-84E2-4928-AF7B-833B07E75316}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_game_music" ID="{03F68105-E06B-411D-9B87-1CEDD67CDAFC}">
+					<ChildrenList>
+						<Action Name="" ID="{4FCBFE88-A41E-4B88-B625-40D0430F8EF5}" ShortID="17903773">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="game_music" ID="{69F444A8-31D2-483F-B534-1433D84370E5}" WorkUnitID="{144C97B3-E93B-46EF-88F9-5BCA64E7FEEC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_four" ID="{239A82B7-2198-4FB5-9FAD-B5009616B127}">
+					<ChildrenList>
+						<Action Name="" ID="{C93F9859-5D59-4888-896D-44C712E9D5F8}" ShortID="415431295">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="four" ID="{EE845D46-5C88-45AB-8745-BE5939CC000E}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_metal" ID="{753247ED-BDF0-4947-A49B-1D5F6A33C2FC}">
+					<ChildrenList>
+						<Action Name="" ID="{700E8A48-78A4-408D-AC92-BC2325F8BC7F}" ShortID="656850344">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="metal" ID="{DC5D477D-B058-4D3E-BA14-6CA62DA2C688}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_aspire" ID="{39BAC589-E972-4001-A6BD-E30E2213095D}">
+					<ChildrenList>
+						<Action Name="" ID="{081A808B-4912-4133-A22B-F78EB5BD08B7}" ShortID="1031216777">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="aspire" ID="{3F80E460-2F3D-4935-94EA-AAF3F95B4AC9}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_police" ID="{8546BF1B-0AE0-4852-B7DC-EEC4D40062B6}">
+					<ChildrenList>
+						<Action Name="" ID="{9D81E8B7-1077-4596-B2DF-C8FA6220E543}" ShortID="1051243981">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="police" ID="{2C232AB7-BA3C-46E7-8AF8-6A4E559C0A58}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{188DDDBC-8323-41D4-AE6C-2E01B8FDA29B}" ShortID="1053007764">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="police" ID="{51B91BB4-AABE-4A32-B8EF-AB4009717E22}" WorkUnitID="{0A90EF83-DEC1-4433-A97D-2B843564CC00}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_police" ID="{CF3CE80B-F2DE-460B-9396-72ECC98DCCCF}">
+					<ChildrenList>
+						<Action Name="" ID="{B3577533-44E7-44F1-B55C-AF5F4B349425}" ShortID="142533007">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="police" ID="{51B91BB4-AABE-4A32-B8EF-AB4009717E22}" WorkUnitID="{0A90EF83-DEC1-4433-A97D-2B843564CC00}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

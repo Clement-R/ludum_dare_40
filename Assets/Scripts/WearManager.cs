@@ -51,11 +51,6 @@ public class WearManager : MonoBehaviour {
         StartCoroutine(LoseWear());
     }
 
-    private void Update()
-    {
-        print(_remainingToolbox);
-    }
-
     public int GetRemainingToolbox()
     {
         return _remainingToolbox;
