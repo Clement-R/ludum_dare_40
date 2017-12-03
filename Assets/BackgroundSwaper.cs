@@ -20,7 +20,7 @@ public class BackgroundSwaper : MonoBehaviour {
     {
         foreach (var background in backgroundStatic)
         {
-            background.GetComponent<ScrollingObject>().scrollSpeed = backgroundSpeedByMotorLevelStatic[speed];
+            background.GetComponent<ScrollingObject>().UpdateSpeed(backgroundSpeedByMotorLevelStatic[speed]);
         }
     }
 }

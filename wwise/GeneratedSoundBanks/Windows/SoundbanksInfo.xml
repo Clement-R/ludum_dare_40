@@ -22,18 +22,48 @@
 			<Path>ludum_soundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1912676331" Name="Play_action_lapin" ObjectPath="\Events\Default Work Unit\Play_action_lapin"/>
-				<Event Id="2492971224" Name="Play_aspire" ObjectPath="\Events\Default Work Unit\Play_aspire"/>
-				<Event Id="3033088026" Name="Play_four" ObjectPath="\Events\Default Work Unit\Play_four"/>
-				<Event Id="4141037488" Name="Play_game_music" ObjectPath="\Events\Default Work Unit\Play_game_music"/>
+				<Event Id="2492971224" Name="Play_aspire" ObjectPath="\Events\Default Work Unit\mamazon\Play_aspire"/>
+				<Event Id="2059889379" Name="Play_defaite_lapin" ObjectPath="\Events\Default Work Unit\Play_defaite_lapin"/>
+				<Event Id="17703653" Name="Play_defaite_police" ObjectPath="\Events\Default Work Unit\Play_defaite_police"/>
+				<Event Id="3033088026" Name="Play_four" ObjectPath="\Events\Default Work Unit\vaisseau\Play_four"/>
+				<Event Id="4141037488" Name="Play_game_music" ObjectPath="\Events\Default Work Unit\music\Play_game_music"/>
 				<Event Id="3678041040" Name="Play_jetpack" ObjectPath="\Events\Default Work Unit\Play_jetpack"/>
+				<Event Id="1489408508" Name="Play_low_speed" ObjectPath="\Events\Default Work Unit\vaisseau\Play_low_speed"/>
+				<Event Id="2228153899" Name="Play_menu_music" ObjectPath="\Events\Default Work Unit\menu\Play_menu_music"/>
 				<Event Id="3199860711" Name="Play_metal" ObjectPath="\Events\Default Work Unit\Play_metal"/>
-				<Event Id="1484926170" Name="Play_moteur" ObjectPath="\Events\Default Work Unit\Play_moteur"/>
+				<Event Id="1484926170" Name="Play_moteur" ObjectPath="\Events\Default Work Unit\vaisseau\Play_moteur"/>
+				<Event Id="3720709400" Name="Play_overbutton" ObjectPath="\Events\Default Work Unit\menu\Play_overbutton"/>
+				<Event Id="4233560256" Name="Play_pause" ObjectPath="\Events\Default Work Unit\Play_pause"/>
 				<Event Id="1656134708" Name="Play_police" ObjectPath="\Events\Default Work Unit\Play_police"/>
 				<Event Id="2028669661" Name="Play_reparation" ObjectPath="\Events\Default Work Unit\Play_reparation"/>
 				<Event Id="3343348020" Name="Play_reproduction" ObjectPath="\Events\Default Work Unit\Play_reproduction"/>
+				<Event Id="1042987450" Name="Play_select" ObjectPath="\Events\Default Work Unit\menu\Play_select"/>
+				<Event Id="3240502920" Name="Play_tuto" ObjectPath="\Events\Default Work Unit\Play_tuto"/>
+				<Event Id="1801567740" Name="Play_usure" ObjectPath="\Events\Default Work Unit\vaisseau\Play_usure"/>
+				<Event Id="3233022132" Name="Play_usurecritique" ObjectPath="\Events\Default Work Unit\vaisseau\Play_usurecritique"/>
+				<Event Id="3809633750" Name="Stop_game_music" ObjectPath="\Events\Default Work Unit\music\Stop_game_music"/>
+				<Event Id="686738888" Name="Stop_moteur" ObjectPath="\Events\Default Work Unit\vaisseau\Stop_moteur"/>
+				<Event Id="3298098222" Name="Stop_pause" ObjectPath="\Events\Default Work Unit\Stop_pause"/>
 				<Event Id="4170265338" Name="Stop_police" ObjectPath="\Events\Default Work Unit\Stop_police"/>
+				<Event Id="2401184783" Name="Trigger_mamazon" ObjectPath="\Events\Default Work Unit\mamazon\Trigger_mamazon"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="62730705" Language="SFX">
+					<ShortName>low_speed.wav</ShortName>
+					<Path>SFX\low_speed_B95B134F.wem</Path>
+				</File>
+				<File Id="82854810" Language="SFX">
+					<ShortName>defaite_police.wav</ShortName>
+					<Path>SFX\defaite_police_B95B134F.wem</Path>
+				</File>
+				<File Id="119835608" Language="SFX">
+					<ShortName>usure.wav</ShortName>
+					<Path>SFX\usure_B95B134F.wem</Path>
+				</File>
+				<File Id="187799466" Language="SFX">
+					<ShortName>bunnylol.wav</ShortName>
+					<Path>SFX\bunnylol_B95B134F.wem</Path>
+				</File>
 				<File Id="233422208" Language="SFX">
 					<ShortName>47835__tc630__fire2.wav</ShortName>
 					<Path>SFX\47835__tc630__fire2_A2672D7D.wem</Path>
@@ -90,9 +120,17 @@
 					<ShortName>metal3.wav</ShortName>
 					<Path>SFX\metal3_DE5745D4.wem</Path>
 				</File>
+				<File Id="579303373" Language="SFX">
+					<ShortName>111671__fatlane__policesiren.wav</ShortName>
+					<Path>SFX\111671__fatlane__policesiren_8C8D83EE.wem</Path>
+				</File>
 				<File Id="691249844" Language="SFX">
 					<ShortName>metal1.wav</ShortName>
 					<Path>SFX\metal1_7F183517.wem</Path>
+				</File>
+				<File Id="697764105" Language="SFX">
+					<ShortName>mamazon.wav</ShortName>
+					<Path>SFX\mamazon_A2672D7D.wem</Path>
 				</File>
 				<File Id="788801108" Language="SFX">
 					<ShortName>146770__qubodup__rocket-boost-engine-loop.wav</ShortName>
@@ -102,6 +140,10 @@
 					<ShortName>né.wav</ShortName>
 					<Path>SFX\né_8F69D0BC.wem</Path>
 				</File>
+				<File Id="932001377" Language="SFX">
+					<ShortName>usurecritique.wav</ShortName>
+					<Path>SFX\usurecritique_B95B134F.wem</Path>
+				</File>
 				<File Id="946078885" Language="SFX">
 					<ShortName>376415__inspectorj__wind-synthesized-a.wav</ShortName>
 					<Path>SFX\376415__inspectorj__wind-synthesized-a_58AD895F.wem</Path>
@@ -109,6 +151,10 @@
 				<File Id="1014768237" Language="SFX">
 					<ShortName>lapins-001.wav</ShortName>
 					<Path>SFX\lapins-001_B95B134F.wem</Path>
+				</File>
+				<File Id="1062944287" Language="SFX">
+					<ShortName>music_menu.wav</ShortName>
+					<Path>SFX\music_menu_A2672D7D.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

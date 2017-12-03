@@ -14,12 +14,28 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Trigger_mamazon" ID="{4ECEB226-C06E-4032-9D36-5A163AF23FF6}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_pause" ID="{B84EEFB0-E5B8-490F-9492-91A0381300D6}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_moteur" ID="{E7A1CE2E-0DF7-49C3-82FB-ACAB0A144201}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_reproduction" ID="{7C2A8408-882A-4F80-8332-4C52C04729EB}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
 							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_defaite_police" ID="{165D4D58-23D8-4BF8-AD42-1405A706346B}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_pause" ID="{AA62D400-8FF8-40CB-8381-BB5196F9F1A4}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_jetpack" ID="{6E3D33A8-17E2-4AD3-ADD4-042810BFD64A}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
@@ -30,6 +46,14 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_defaite_lapin" ID="{9AE472E8-E4CE-4394-9949-25A088C7FB88}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_usure" ID="{A4D5F2E0-A432-4725-8AF2-97B87B52F059}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_action_lapin" ID="{47278591-4769-43A9-B32C-F292F3883FF8}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -38,14 +62,38 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_menu_music" ID="{E4BBE4DF-7FD5-4D20-9FAE-8E481C59C524}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_low_speed" ID="{A43CDF2D-E23C-4FDD-A45F-3C618E8B605B}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_four" ID="{239A82B7-2198-4FB5-9FAD-B5009616B127}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Stop_police" ID="{CF3CE80B-F2DE-460B-9396-72ECC98DCCCF}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
 							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_usurecritique" ID="{1E576E92-D949-4DC7-B1D5-7480E90D6B51}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="4" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="speed_perso" ID="{74F8D785-D6FC-4467-9AE1-005D237A1DB4}"/>
+							<GameParameterRef Name="sidechain" ID="{2A4FC714-E474-43B8-AB9E-60746260CEF4}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="music_slow" ID="{D2CFEB07-D3E4-43DA-83AC-AD88F3556547}"/>
 							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="speed_perso" ID="{74F8D785-D6FC-4467-9AE1-005D237A1DB4}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="police" ID="{51B91BB4-AABE-4A32-B8EF-AB4009717E22}"/>
@@ -53,10 +101,12 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="speed_vaisseau" ID="{580A8636-4947-4BA9-9605-D5BC3A66AA2B}"/>
-							<Value>0</Value>
+							<Value>27</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{54ACF071-72A3-436A-A782-B21A76F1E53E}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

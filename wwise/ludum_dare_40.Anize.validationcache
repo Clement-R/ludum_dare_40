@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="80">
-	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="339593250" DateHigh="30632875"/>
+	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="151425264" DateHigh="30632897"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Attenuations\Default Work Unit.wwu" DateLow="4285886870" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Audio Devices\Default Work Unit.wwu" DateLow="4285926974" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Control Surface Sessions\Default Work Unit.wwu" DateLow="4285977151" DateHigh="30632801"/>
@@ -9,10 +9,10 @@
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Dynamic Dialogue\Default Work Unit.wwu" DateLow="4286089473" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Effects\Default Work Unit.wwu" DateLow="4286119544" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Effects\Factory Effects.wwu" DateLow="4286169692" DateHigh="30632801"/>
-	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Events\Default Work Unit.wwu" DateLow="340037564" DateHigh="30632875"/>
-	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Game Parameters\Default Work Unit.wwu" DateLow="879963888" DateHigh="30632865"/>
-	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="879662284" DateHigh="30632865"/>
-	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\ludum_dare_40.Anize.wsettings" DateLow="2435713834" DateHigh="30632875"/>
+	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Events\Default Work Unit.wwu" DateLow="151231087" DateHigh="30632897"/>
+	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Game Parameters\Default Work Unit.wwu" DateLow="151160383" DateHigh="30632897"/>
+	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="151291235" DateHigh="30632897"/>
+	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\ludum_dare_40.Anize.wsettings" DateLow="1153047215" DateHigh="30632897"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\ludum_dare_40.wproj" DateLow="3019779534" DateHigh="30632802"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3486305136" DateHigh="30632843"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Mixing Sessions\Default Work Unit.wwu" DateLow="4286333894" DateHigh="30632801"/>
@@ -21,7 +21,7 @@
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Queries\Default Work Unit.wwu" DateLow="4286454220" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Queries\Factory Queries.wwu" DateLow="4286494320" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\SoundBanks\Default Work Unit.wwu" DateLow="3026677153" DateHigh="30632847"/>
-	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Soundcaster Sessions\Default Work Unit.wwu" DateLow="339713523" DateHigh="30632875"/>
+	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Soundcaster Sessions\Default Work Unit.wwu" DateLow="151350065" DateHigh="30632897"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\States\Default Work Unit.wwu" DateLow="4286574545" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Switches\Default Work Unit.wwu" DateLow="4286614646" DateHigh="30632801"/>
 	<ValidationCacheItem File="E:\PROJET M2\Ludum 40\Wwise_ludum\Triggers\Default Work Unit.wwu" DateLow="4286644960" DateHigh="30632801"/>
