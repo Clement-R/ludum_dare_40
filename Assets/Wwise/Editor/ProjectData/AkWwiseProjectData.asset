@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}'
-    m_lastTimePsrt1: 1524552733
-    m_lastTimePart2: -1999291948
+    m_lastTimePsrt1: 534577184
+    m_lastTimePart2: -1999291858
     List:
     - Name: Play_action_lapin
       Path: Default Work Unit\Play_action_lapin
@@ -119,6 +119,16 @@ MonoBehaviour:
       ID: -951619276
       Guid: 08842a7c2a88804f83324c52c04729eb
       maxAttenuation: 0
+    - Name: Stop_police
+      Path: Default Work Unit\Stop_police
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_police
+        ObjectType: 3
+      ID: -124701958
+      Guid: 0be83ccfdef20b46939672ecc98dcccf
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -160,8 +170,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A90EF83-DEC1-4433-A97D-2B843564CC00}'
-    m_lastTimePsrt1: 1524577748
-    m_lastTimePart2: -1999291948
+    m_lastTimePsrt1: 534602207
+    m_lastTimePart2: -1999291858
     List:
     - Name: police
       Path: Default Work Unit\police

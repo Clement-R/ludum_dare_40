@@ -40,7 +40,7 @@ public class HolderBehavior : MonoBehaviour {
                 {
                     DropObject();
                 }
-                else if (interactionController.GetIsInMotorZone())
+                else if (interactionController.GetIsInMotorZone() || interactionController.GetIsInDeliveryZone())
                 {
                     UseBunny();
                 }
@@ -62,7 +62,7 @@ public class HolderBehavior : MonoBehaviour {
 
     private bool CanDropBunny()
     {
-        if((interactionController.GetIsInBunnyDropZone() || interactionController.GetIsInMotorZone()) && _holdedObject != null && _holdedObject.tag == "Bunny")
+        if((interactionController.GetIsInBunnyDropZone() || interactionController.GetIsInMotorZone() || interactionController.GetIsInDeliveryZone()) && _holdedObject != null && _holdedObject.tag == "Bunny")
         {
             return true;
         }
@@ -79,6 +79,32 @@ public class HolderBehavior : MonoBehaviour {
             EventManager.TriggerEvent("KillBunny");
             // Add power to the motor
             EventManager.TriggerEvent("UseBunnyInMotor");
+        }
+
+        if (interactionController.GetIsInDeliveryZone())
+        {
+            if(MamazonManager.IsShipAvailable())
+            {
+                // Check if the player doesn't already have max toolbox
+                if (WearManager.GetRemainingToolbox() != WearManager.GetMaxToolbox())
+                {
+                    KillObject();
+                    // Decrease bunny counter
+                    EventManager.TriggerEvent("KillBunny");
+                    // Add a toolbox
+                    EventManager.TriggerEvent("UseDeliveryZone");
+                }
+                else
+                {
+                    print("full toolbox !!");
+                    // TODO : Feedback on already have max tools
+                }
+            }
+            else
+            {
+                print("Delivery zone not available");
+            }
+            
         }
     }
 

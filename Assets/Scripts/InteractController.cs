@@ -8,6 +8,7 @@ public class InteractController : MonoBehaviour {
     private bool _isInMotorZone = false;
     private bool _isInRepairZone = false;
     private bool _isInWallZone = false;
+    private bool _isInDeliveryZone = false;
 
     public bool GetIsInBunnyDropZone()
     {
@@ -29,6 +30,11 @@ public class InteractController : MonoBehaviour {
         return _isInWallZone;
     }
 
+    public bool GetIsInDeliveryZone()
+    {
+        return _isInDeliveryZone;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.name)
@@ -48,6 +54,10 @@ public class InteractController : MonoBehaviour {
             case "Wall":
                 _isInWallZone = true;
                 break;
+
+            case "Mamazon":
+                _isInDeliveryZone = true;
+                break;
         }
     }
 
@@ -65,6 +75,10 @@ public class InteractController : MonoBehaviour {
 
             case "RepairRoom":
                 _isInWallZone = false;
+                break;
+
+            case "Mamazon":
+                _isInDeliveryZone = false;
                 break;
         }
     }
