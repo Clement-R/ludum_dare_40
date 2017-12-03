@@ -28,14 +28,18 @@ public class PlayerController : MonoBehaviour {
         _rb.velocity = velocity;
 
         // Flip character sprite
-        if(transform.position.x >= Camera.main.ScreenToWorldPoint(Input.mousePosition).x)
+        if(transform.position.x > Camera.main.ScreenToWorldPoint(Input.mousePosition).x)
         {
             _sr.flipY = true;
+            transform.GetChild(0).transform.localPosition = new Vector2(transform.GetChild(0).transform.localPosition.x, -59f);
+            transform.GetChild(0).transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 180f));
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180f));
         }
         else
         {
             _sr.flipY = false;
+            transform.GetChild(0).transform.localPosition = new Vector2(transform.GetChild(0).transform.localPosition.x, 59f);
+            transform.GetChild(0).transform.localRotation = Quaternion.Euler(Vector3.zero);
             transform.rotation = Quaternion.Euler(Vector3.zero);
         }
     }
