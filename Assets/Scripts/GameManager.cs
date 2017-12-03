@@ -5,8 +5,13 @@ using pkm.EventManager;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        AkSoundEngine.SetState("pause", "None");
+        AkSoundEngine.PostEvent("Play_game_music", gameObject);
+    }
+
+    private void Start () {
         EventManager.StartListening("LoseBunny", LoseByBunny);
         EventManager.StartListening("LoseWear", LoseByWear);
         EventManager.StartListening("LoseCop", LoseByCop);

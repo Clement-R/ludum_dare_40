@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}'
-    m_lastTimePsrt1: -1794384863
-    m_lastTimePart2: -1999291793
+    m_lastTimePsrt1: 422392732
+    m_lastTimePart2: -1999291770
     List:
     - Name: Play_action_lapin
       Path: Default Work Unit\Play_action_lapin
@@ -263,6 +263,16 @@ MonoBehaviour:
       ID: 686738888
       Guid: ed17186bfb1a46478451ecb2f8f0c082
       maxAttenuation: 0
+    - Name: Stop_music_menu
+      Path: Default Work Unit\Stop_music_menu
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_music_menu
+        ObjectType: 3
+      ID: 106912753
+      Guid: a68b1f537faefe4bbc2985bfa34f9e5b
+      maxAttenuation: 0
     - Name: Stop_pause
       Path: Default Work Unit\Stop_pause
       PathAndIcons:
@@ -429,6 +439,9 @@ MonoBehaviour:
   - /ludum_dare_40/Events/Default Work Unit/vaisseau
   - /ludum_dare_40/SoundBanks
   - /ludum_dare_40/SoundBanks/Default Work Unit
+  - /ludum_dare_40/States
+  - /ludum_dare_40/States/Default Work Unit
+  - /ludum_dare_40/States/Default Work Unit/pause
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

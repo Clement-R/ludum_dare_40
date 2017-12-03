@@ -15,9 +15,21 @@
 					<ChildrenList>
 						<BlendContainer Name="motor" ID="{602A7E67-B769-47E3-AE2C-001D9927EBBF}" ShortID="399804">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
@@ -484,6 +496,15 @@
 						</BlendContainer>
 						<Sound Name="four" ID="{EE845D46-5C88-45AB-8745-BE5939CC000E}" ShortID="1026352390">
 							<PropertyList>
+								<Property Name="EnablePanner" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -496,6 +517,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -519,6 +545,14 @@
 									<AudioFile>four.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{11E5B7DA-6238-471E-BFD7-2D408A69692C}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-46.0285132382892"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="four" ID="{FFC7424D-8079-4128-A870-1FC9CE331CBE}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -526,9 +560,6 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="lapins" ID="{CFEC8324-4B91-46BF-A6C6-FB9AD2A7E177}" ShortID="337817135">
-					<PropertyList>
-						<Property Name="PositioningType" Type="int16" Value="1"/>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
@@ -657,6 +688,13 @@
 										<Value>44</Value>
 									</ValueList>
 								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>780</Value>
@@ -672,6 +710,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -712,8 +755,6 @@
 				</ActorMixer>
 				<ActorMixer Name="perso" ID="{07F8328A-515A-4D5F-9032-2650561D626B}" ShortID="697710614">
 					<PropertyList>
-						<Property Name="EnablePositioning" Type="bool" Value="False"/>
-						<Property Name="PositioningType" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
@@ -1041,9 +1082,16 @@
 						</BlendContainer>
 						<Sound Name="reparation" ID="{B7C7DE12-84E2-4928-AF7B-833B07E75316}" ShortID="504770735">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>29</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -1058,6 +1106,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -1196,6 +1249,11 @@
 						</RandomSequenceContainer>
 						<Sound Name="aspire" ID="{3F80E460-2F3D-4935-94EA-AAF3F95B4AC9}" ShortID="957323147">
 							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1318,6 +1376,45 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="usure" ID="{883401F5-7C5F-4776-9BD4-0157F76BCEF2}" ShortID="408499760">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{79F59239-1384-4998-979B-C8F21A566EFD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="31"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7818B4A2-FD37-481D-9B1F-D3A4A7960D9E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
@@ -1329,9 +1426,13 @@
 							<ChildrenList>
 								<AudioFileSource Name="usure" ID="{091A9F48-976D-4BD4-AEA4-6AF3F647F084}" ShortID="119835608">
 									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="9.94930391384291E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.984981087470449"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.253707249802995"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.55706606251642"/>
 										<Property Name="VolumeOffset" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>8.2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1344,6 +1445,20 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="usurecritique" ID="{CBC08A30-EF4C-41CE-82D4-EC06633C040D}" ShortID="109058989">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
@@ -1414,6 +1529,8 @@
 						</Sound>
 						<Sound Name="low_speed" ID="{1863CF5F-D601-47CE-8B2E-6408A2146397}" ShortID="177781418">
 							<PropertyList>
+								<Property Name="EnablePanner" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>6</Value>
@@ -1434,8 +1551,92 @@
 									<AudioFile>low_speed.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{0A043FD6-EB2F-4F7D-8B8E-6C90ADF964AB}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-52.9531568228106"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="low_speed" ID="{F9E4D761-AAA4-4BE2-BCFF-65F4D36EA9F8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="mamazon ship" ID="{888339AE-C5CA-4A09-86DE-9288B8DDC73F}" ShortID="419397921">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>41</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>57</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{26E0477A-D939-419C-A918-4441DFBE08C0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="253"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="four" ID="{8790243C-491E-4611-8BC3-945735012173}" ShortID="800674441">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="5.70874720982143E-02"/>
+										<Property Name="TrimBegin" Type="Real64" Value="7.61166294642857E-02"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>9.3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>four.wav</AudioFile>
+								</AudioFileSource>
+								<SourcePlugin Name="Wwise Tone Generator" ID="{9610AAD9-0A72-499F-BA86-492FDE283158}" ShortID="512431739" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="AttackTime" Type="Real32" Value="2.5"/>
+										<Property Name="DecayTime" Type="Real32" Value="0.2"/>
+										<Property Name="DurMode" Type="int32" Value="1"/>
+										<Property Name="FixDur" Type="Real32" Value="2.8"/>
+										<Property Name="ReleaseTime" Type="Real32" Value="0.1"/>
+										<Property Name="SustainLevel" Type="Real32" Value="-16.7"/>
+										<Property Name="SustainTime" Type="Real32" Value="0"/>
+										<Property Name="WaveGain" Type="Real32" Value="-13.9"/>
+										<Property Name="WaveType" Type="int32" Value="4"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{54DA3FF4-B419-4452-AB33-53A93BD78A63}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-0.407331975560068"/>
+										<Property Name="PanY" Type="Real64" Value="0.215982721382289"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Tone Generator" ID="{9610AAD9-0A72-499F-BA86-492FDE283158}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

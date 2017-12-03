@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	17703653	Play_defaite_police			\Default Work Unit\Play_defaite_police	
+	106912753	Stop_music_menu			\Default Work Unit\Stop_music_menu	
 	686738888	Stop_moteur			\Default Work Unit\vaisseau\Stop_moteur	
 	1042987450	Play_select			\Default Work Unit\menu\Play_select	
 	1484926170	Play_moteur			\Default Work Unit\vaisseau\Play_moteur	
@@ -50,11 +51,12 @@ Trigger	ID	Name			Wwise Object Path	Notes
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	114974254	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\perso\jetpack\noise\Wwise Synth One	
+	512431739	Wwise Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Default Work Unit\ui\mamazon ship\Wwise Tone Generator	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	62730705	low_speed	E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\SFX\low_speed_B95B134F.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\low_speed		89975
 	82854810	defaite_police	E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\SFX\defaite_police_B95B134F.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\defaite_police		155693
-	119835608	usure	E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\SFX\usure_B95B134F.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\usure		164708
+	119835608	usure	E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\SFX\usure_340E8E0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\usure		71920
 	187799466	defaite_lapin	E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\SFX\bunnylol_B95B134F.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\defaite_lapin		35855
 	233422208	47835__tc630__fire2	E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\SFX\47835__tc630__fire2_A2672D7D.wem		\Actor-Mixer Hierarchy\Default Work Unit\perso\jetpack\47835__tc630__fire2		864058
 	312489251	music_all	E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\SFX\music_all_A2672D7D.wem		\Interactive Music Hierarchy\Default Work Unit\game_music\music\music_all		11054797

@@ -93,7 +93,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="speed_perso" ID="{74F8D785-D6FC-4467-9AE1-005D237A1DB4}"/>
-							<Value>100</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="police" ID="{51B91BB4-AABE-4A32-B8EF-AB4009717E22}"/>
@@ -101,7 +101,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="speed_vaisseau" ID="{580A8636-4947-4BA9-9605-D5BC3A66AA2B}"/>
-							<Value>27</Value>
+							<Value>88</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">

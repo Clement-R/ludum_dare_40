@@ -64,6 +64,7 @@
 						<Action Name="" ID="{700E8A48-78A4-408D-AC92-BC2325F8BC7F}" ShortID="656850344">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.8"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -331,6 +332,7 @@
 								<Action Name="" ID="{081A808B-4912-4133-A22B-F78EB5BD08B7}" ShortID="1031216777">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -356,8 +358,8 @@
 								<Action Name="" ID="{73360497-720B-4EBB-8F56-A6B35B10BC38}" ShortID="170954700">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="26"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-										<Property Name="Lowpass" Type="int16" Value="40"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+										<Property Name="Lowpass" Type="int16" Value="27"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -376,6 +378,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="music" ID="{E855BFAF-3078-411C-8D75-EA5696D01DF1}" WorkUnitID="{144C97B3-E93B-46EF-88F9-5BCA64E7FEEC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CE258495-3B40-4910-AEBC-0C528309EB88}" ShortID="786809064">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mamazon ship" ID="{888339AE-C5CA-4A09-86DE-9288B8DDC73F}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -543,6 +556,17 @@
 									<ObjectRef Name="None" ID="{54ACF071-72A3-436A-A782-B21A76F1E53E}" WorkUnitID="{E13EC284-BDA5-401C-B677-27A609451CCA}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_music_menu" ID="{531F8BA6-AE7F-4BFE-BC29-85BFA34F9E5B}">
+					<ChildrenList>
+						<Action Name="" ID="{E26C3485-877D-4F1A-B8E5-86F3E2902D20}" ShortID="567951990">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>
