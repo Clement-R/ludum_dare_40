@@ -36,6 +36,7 @@ public class MotorBehavior : MonoBehaviour {
     private float _decreaseRate;
 
     private SpriteRenderer _motorLevelSr;
+    private Animator _motorTube;
 #endregion PRIVATE_VARIABLES
 
     private void Start ()
@@ -47,12 +48,19 @@ public class MotorBehavior : MonoBehaviour {
         _distance = _initialDistance;
 
         _motorLevelSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _motorTube = transform.GetChild(1).GetComponent<Animator>();
     }
 	
     private void AddPower()
     {
         _speed += _bunnyPower;
         _speed = Mathf.Clamp(_speed, 0, _maxSpeed);
+
+        // TODO : play particle system
+        GetComponentInChildren<ParticleSystem>().Play();
+        // TODO : play sound
+        // TODO : play tube animation
+        _motorTube.SetTrigger("put_RABBIT");
     }
 
     private void Update ()
