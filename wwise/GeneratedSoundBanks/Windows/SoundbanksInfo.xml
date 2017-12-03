@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>E:\PROJET M2\Ludum 40\Wwise_ludum\</ProjectRoot>
-		<SourceFilesRoot>E:\PROJET M2\Ludum 40\Wwise_ludum\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\PROJET M2\Ludum 40\Wwise_ludum\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\_Dev\Gamedev\ludum_dare_40\wwise\</ProjectRoot>
+		<SourceFilesRoot>E:\_Dev\Gamedev\ludum_dare_40\wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\_Dev\Gamedev\ludum_dare_40\wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\PROJET M2\Ludum 40\Wwise_ludum\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\_Dev\Gamedev\ludum_dare_40\wwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -122,7 +122,7 @@
 				</File>
 				<File Id="579303373" Language="SFX">
 					<ShortName>111671__fatlane__policesiren.wav</ShortName>
-					<Path>SFX\111671__fatlane__policesiren_8C8D83EE.wem</Path>
+					<Path>SFX\111671__fatlane__policesiren_A4D55BDC.wem</Path>
 				</File>
 				<File Id="691249844" Language="SFX">
 					<ShortName>metal1.wav</ShortName>

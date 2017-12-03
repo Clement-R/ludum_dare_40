@@ -50,12 +50,12 @@ public class ResourceManager : MonoBehaviour {
             }
         }
 
-        if(_bunnyCounter >= maxBunniesStatic)
+        if(_bunnyCounter >= maxBunniesStatic && Time.timeScale > 0)
         {
             EventManager.TriggerEvent("LoseBunny");
         }
 
-        if (_bunnyCounter == 0)
+        if (_bunnyCounter == 0 && Time.timeScale > 0)
         {
             EventManager.TriggerEvent("LoseBunnyNone");
         }
@@ -72,6 +72,7 @@ public class ResourceManager : MonoBehaviour {
 
     private void BunnyReproduction()
     {
+        AkSoundEngine.PostEvent("Play_reproduction", gameObject);
         Vector2 pos = new Vector2(bunnyTransform.transform.position.x + Random.Range(-10f, 11f), bunnyTransform.transform.position.y);
         Instantiate(bunnyPrefab, pos, Quaternion.identity, bunnyTransform.transform);
         _bunnyCounter++;

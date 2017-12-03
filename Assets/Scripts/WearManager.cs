@@ -75,6 +75,7 @@ public class WearManager : MonoBehaviour {
 
     public static void GainToolbox()
     {
+        AkSoundEngine.PostEvent("Play_metal", Camera.main.gameObject);
         _remainingToolbox++;
         _remainingToolbox = Mathf.Clamp(_remainingToolbox, 0, _maxToolboxStatic);
     }
@@ -95,6 +96,8 @@ public class WearManager : MonoBehaviour {
 
                     // Update its sprite accordingly to its health
                     _wallsObjects[index].sprite = wallSpriteStatic[_walls[index].health];
+
+                    AkSoundEngine.PostEvent("Play_reparation", _wallsObjects[index].gameObject);
 
                     // Lose a toolbox
                     _remainingToolbox--;
@@ -127,6 +130,12 @@ public class WearManager : MonoBehaviour {
         // Get random wall that will get damaged
         int wallIndex = walls[Random.Range(0, walls.Count)];
         _walls[wallIndex].health--;
+        AkSoundEngine.PostEvent("Play_usure", gameObject);
+
+        if(_walls[wallIndex].health == 1)
+        {
+            AkSoundEngine.PostEvent("Play_usurecritique", gameObject);
+        }
 
         if(_walls[wallIndex].health == 0)
         {
