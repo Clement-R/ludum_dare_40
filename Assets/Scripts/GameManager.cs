@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
         EventManager.StartListening("LoseBunny", LoseByBunny);
         EventManager.StartListening("LoseWear", LoseByWear);
         EventManager.StartListening("LoseCop", LoseByCop);
+        EventManager.StartListening("LoseBunnyNone", LoseByBunnyNone);
     }
 
     private void Lose()
@@ -20,6 +21,12 @@ public class GameManager : MonoBehaviour {
     private void LoseByBunny()
     {
         Debug.Log("You lose by too much bunnies.");
+        Lose();
+    }
+
+    private void LoseByBunnyNone()
+    {
+        Debug.Log("You lose by no more bunnies.");
         Lose();
     }
 

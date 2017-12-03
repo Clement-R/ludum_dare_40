@@ -36,8 +36,6 @@ public class ResourceManager : MonoBehaviour {
 
     private void Update ()
     {
-        print(_reproductionCooldown);
-
         if (_bunnyCounter >= 2)
         {
             if(Time.time >= _nextReproduction)
@@ -52,7 +50,12 @@ public class ResourceManager : MonoBehaviour {
         {
             EventManager.TriggerEvent("LoseBunny");
         }
-	}
+
+        if (_bunnyCounter == 0)
+        {
+            EventManager.TriggerEvent("LoseBunnyNone");
+        }
+    }
 
     static public int GetNumberOfBunnies()
     {

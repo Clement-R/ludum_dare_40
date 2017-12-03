@@ -45,7 +45,8 @@ public class WearManager : MonoBehaviour {
             _wallsObjects[i].sprite = wallSprite[5];
         }
 
-        _remainingToolbox = _maxToolboxStatic;
+        // _remainingToolbox = _maxToolboxStatic;
+        _remainingToolbox = 1;
 
         _timeBeforeDecrease = (ResourceManager.maxBunniesStatic / (float) ResourceManager.GetNumberOfBunnies()) * scaleFactor;
 

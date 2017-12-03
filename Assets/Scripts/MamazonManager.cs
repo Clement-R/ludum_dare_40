@@ -37,6 +37,8 @@ public class MamazonManager : MonoBehaviour {
             _bunniesInCurrentDelivery++;
             // TODO : Increase HUD bunny counter
             WearManager.GainToolbox();
+
+            gameObject.transform.GetChild(0).GetChild(0).GetComponent<Animator>().SetTrigger("putRabbit");
         }
         else
         {
@@ -68,7 +70,12 @@ public class MamazonManager : MonoBehaviour {
 
     IEnumerator Appear()
     {
-        gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("mamazonCome");
+
+        yield return new WaitForSeconds(0.35f);
+
+        gameObject.transform.GetChild(0).GetChild(0).GetComponent<Animator>().SetTrigger("putRabbit");
+
         _isShipAvailable = true;
         _bunniesInCurrentDelivery = 0;
         yield return null;
@@ -76,7 +83,8 @@ public class MamazonManager : MonoBehaviour {
 
     IEnumerator Disappear()
     {
-        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("mamazonLeave");
+        
         _isShipAvailable = false;
         yield return null;
     }
