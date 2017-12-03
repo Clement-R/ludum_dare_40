@@ -122,6 +122,7 @@ public class HolderBehavior : MonoBehaviour {
     {
         if(_holdedObject.tag == "Bunny")
         {
+            AkSoundEngine.PostEvent("Play_action_lapin", gameObject);
             UseBunny();
         }
     }
@@ -136,6 +137,7 @@ public class HolderBehavior : MonoBehaviour {
 
     private void KillObject()
     {
+        AkSoundEngine.PostEvent("Play_action_lapin", gameObject);
         Destroy(_holdedObject);
 
         _sr.sprite = idleSprite;
@@ -145,6 +147,7 @@ public class HolderBehavior : MonoBehaviour {
 
     private void DropObject()
     {
+        AkSoundEngine.PostEvent("Play_action_lapin", gameObject);
         _holdedObject.GetComponent<Rigidbody2D>().simulated = true;
         _holdedObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         _holdedObject.transform.parent = null;
@@ -156,6 +159,7 @@ public class HolderBehavior : MonoBehaviour {
 
     private void HoldObject(GameObject holdedObject)
     {
+        AkSoundEngine.PostEvent("Play_action_lapin", gameObject);
         holdedObject.transform.parent = transform.GetChild(0).transform;
         holdedObject.GetComponent<Rigidbody2D>().simulated = false;
         holdedObject.transform.position = transform.GetChild(0).transform.position;

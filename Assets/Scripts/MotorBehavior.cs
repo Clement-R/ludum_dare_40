@@ -64,6 +64,21 @@ public class MotorBehavior : MonoBehaviour {
         // UI
         // copMeterPosition = copMeter.transform.position.x;
         // distanceMeterPosition = distanceMeter.transform.position.x;
+
+        StartCoroutine(PlayLowSpeedSound());
+    }
+
+    IEnumerator PlayLowSpeedSound()
+    {
+        while(true)
+        {
+            if(_cappedSpeed <= 2 && Time.time > 1f)
+            {
+                AkSoundEngine.PostEvent("Play_low_speed", gameObject);
+                yield return new WaitForSeconds(5f);
+            }
+            yield return null;
+        }
     }
 
     private void Update ()
@@ -84,17 +99,34 @@ public class MotorBehavior : MonoBehaviour {
             _motorLevelSr.sprite = null;
         }
 
+        // Update motor level sound
+        print((_cappedSpeed * 100) / 6f);
+        AkSoundEngine.SetRTPCValue("speed_vaisseau", (_cappedSpeed * 100) / 6f);
+
         // Update distances
         _distance += _speed;
         _copDistance += _copSpeed;
 
         // Get the delta between the player speed and the cop speed
         float distanceDelta = _distance - _copDistance;
-        
+        if(distanceDelta < 0f)
+        {
+            distanceDelta = 0f;
+        }
+
         // If distance == 0 then the player lose
-        if (distanceDelta <= 0f)
+        if (distanceDelta <= 0f && Time.timeScale > 0)
         {
             EventManager.TriggerEvent("LoseCop");
+        }
+
+        if(distanceDelta <= (300 * 60 * 7) && Time.timeScale > 0)
+        {
+            AkSoundEngine.PostEvent("Play_police", gameObject);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("Stop_police", gameObject);
         }
 
         // Update text score
@@ -113,7 +145,7 @@ public class MotorBehavior : MonoBehaviour {
 
         // Feedbacks
         GetComponentInChildren<ParticleSystem>().Play();
-        // TODO : play sound
+        AkSoundEngine.PostEvent("Play_four", gameObject);
         _motorTube.SetTrigger("put_RABBIT");
     }
 }

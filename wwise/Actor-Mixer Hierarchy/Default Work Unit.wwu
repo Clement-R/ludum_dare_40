@@ -712,6 +712,7 @@
 				</ActorMixer>
 				<ActorMixer Name="perso" ID="{07F8328A-515A-4D5F-9032-2650561D626B}" ShortID="697710614">
 					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -1239,6 +1240,8 @@
 						<Sound Name="police" ID="{2C232AB7-BA3C-46E7-8AF8-6A4E559C0A58}" ShortID="601483737">
 							<PropertyList>
 								<Property Name="EnablePanner" Type="bool" Value="True"/>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>40</Value>
@@ -1249,7 +1252,18 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

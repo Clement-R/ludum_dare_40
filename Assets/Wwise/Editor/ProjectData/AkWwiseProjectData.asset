@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}'
-    m_lastTimePsrt1: 1426758280
-    m_lastTimePart2: -1999291803
+    m_lastTimePsrt1: 1598726340
+    m_lastTimePart2: -1999291794
     List:
     - Name: Play_action_lapin
       Path: Default Work Unit\Play_action_lapin
@@ -421,7 +421,11 @@ MonoBehaviour:
         ObjectType: 14
       ID: -164847286
       Guid: 7a59dfe04033774f8f5cd7090f1958d7
-  ExpandedItems: []
+  ExpandedItems:
+  - /ludum_dare_40
+  - /ludum_dare_40/Events
+  - /ludum_dare_40/Events/Default Work Unit
+  - /ludum_dare_40/Events/Default Work Unit/vaisseau
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

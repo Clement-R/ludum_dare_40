@@ -39,6 +39,7 @@ public class MamazonManager : MonoBehaviour {
     {
         if(_bunniesInCurrentDelivery <= _maxBunniesInDelivery)
         {
+            AkSoundEngine.PostEvent("Play_aspire", gameObject);
             _bunniesInCurrentDelivery++;
             // Increase HUD bunny counter
             bunnyCounterUI.text = _bunniesInCurrentDelivery.ToString();
@@ -66,7 +67,9 @@ public class MamazonManager : MonoBehaviour {
 
     IEnumerator ShipCycle()
     {
-        yield return new WaitForSeconds(_deliveryCooldown);
+        yield return new WaitForSeconds(_deliveryCooldown - 3f);
+        AkSoundEngine.PostEvent("Trigger_mamazon", gameObject);
+        yield return new WaitForSeconds(3f);
         StartCoroutine(Appear());
 
         _remainingDeliveryTime = _deliveryDuration;

@@ -16,7 +16,6 @@ public class WallBehavior : MonoBehaviour
     {
         if(isPlayerInZone)
         {
-            print("Repair wall");
             WearManager.RepairWall(gameObject);
         }
     }

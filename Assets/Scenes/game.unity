@@ -368,6 +368,10 @@ GameObject:
   - component: {fileID: 202008462}
   - component: {fileID: 202008461}
   - component: {fileID: 202008460}
+  - component: {fileID: 202008463}
+  - component: {fileID: 202008465}
+  - component: {fileID: 202008464}
+  - component: {fileID: 202008466}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -421,6 +425,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202008463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202008459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff6b29f0f890b64199f59863c71c56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 330a0a3481010f4fbaed16e23695adc2
+  bankName: ludum_soundbank
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+--- !u!114 &202008464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202008459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2162d22aef92b46b431b8437f64030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 0581f6036be01d419b871cedd67cdafc
+  eventID: -153929808
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  multiPositionTypeLabel: 0
+  multiPositionArray: []
+--- !u!114 &202008465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202008459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0020f36b03bb25408743e30e0d360c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_listeners:
+    initialListenerList: []
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &202008466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202008459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ed5ba829a3d9a4e8cd9b357aece7ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  groupGuid: 8e0e9e32091ea742ae3f48b5ed935c6c
+  valueGuid: 71f0ac54a3726a43a782b21a76f1e53e
+  groupID: -1202379803
+  valueID: 748895195
 --- !u!1 &239996326
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +834,55 @@ SpriteMask:
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
+--- !u!1 &400177757 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1094318474835106, guid: f99400c1692f15b42a274cfe40aa7373,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569086138}
+--- !u!114 &400177758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400177757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2162d22aef92b46b431b8437f64030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 2ecea1e7f70dc34982fbacab0a144201
+  eventID: 1484926170
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  multiPositionTypeLabel: 0
+  multiPositionArray: []
+--- !u!114 &400177759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400177757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0020f36b03bb25408743e30e0d360c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_listeners:
+    initialListenerList: []
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &419020552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1797,16 @@ Prefab:
       propertyPath: remainingTimeUI
       value: 
       objectReference: {fileID: 766100759}
+    - target: {fileID: 61218827238056226, guid: f35626a71a3c0fe439f4dbd87ef10b89,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 115.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 61218827238056226, guid: f35626a71a3c0fe439f4dbd87ef10b89,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 138.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f35626a71a3c0fe439f4dbd87ef10b89, type: 2}
   m_IsPrefabParent: 0
@@ -3178,7 +3321,7 @@ Prefab:
     - target: {fileID: 114812284772662548, guid: f99400c1692f15b42a274cfe40aa7373,
         type: 2}
       propertyPath: _initialDistance
-      value: 1000
+      value: 360000
       objectReference: {fileID: 0}
     - target: {fileID: 61178677458473150, guid: f99400c1692f15b42a274cfe40aa7373,
         type: 2}
@@ -3188,7 +3331,7 @@ Prefab:
     - target: {fileID: 61178677458473150, guid: f99400c1692f15b42a274cfe40aa7373,
         type: 2}
       propertyPath: m_Size.x
-      value: 100
+      value: 145.4
       objectReference: {fileID: 0}
     - target: {fileID: 212717029661420070, guid: f99400c1692f15b42a274cfe40aa7373,
         type: 2}
@@ -3205,6 +3348,11 @@ Prefab:
       propertyPath: distanceText
       value: 
       objectReference: {fileID: 964661299}
+    - target: {fileID: 114812284772662548, guid: f99400c1692f15b42a274cfe40aa7373,
+        type: 2}
+      propertyPath: _initialSpeed
+      value: 600
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f99400c1692f15b42a274cfe40aa7373, type: 2}
   m_IsPrefabParent: 0
@@ -4490,6 +4638,11 @@ Prefab:
       propertyPath: bunniesProgressBar
       value: 
       objectReference: {fileID: 1164534447}
+    - target: {fileID: 114495407240031690, guid: 6b3cf3c5ca77254438f33b9d1c9e0e3d,
+        type: 2}
+      propertyPath: _startingNumberOfBunnies
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b3cf3c5ca77254438f33b9d1c9e0e3d, type: 2}
   m_IsPrefabParent: 0

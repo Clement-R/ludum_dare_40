@@ -20,24 +20,28 @@ public class GameManager : MonoBehaviour {
 
     private void LoseByBunny()
     {
+        AkSoundEngine.PostEvent("Play_defaite_lapin", gameObject);
         Debug.Log("You lose by too much bunnies.");
         Lose();
     }
 
     private void LoseByBunnyNone()
     {
+        // AkSoundEngine.PostEvent("Play_defaite_lapin", gameObject);
         Debug.Log("You lose by no more bunnies.");
         Lose();
     }
 
     private void LoseByWear()
     {
+        AkSoundEngine.PostEvent("Play_defaite_lapin", gameObject);
         Debug.Log("You lose by wear.");
         Lose();
     }
 
     private void LoseByCop()
     {
+        AkSoundEngine.PostEvent("Play_defaite_police", gameObject);
         Debug.Log("You lose by cop.");
         Lose();
     }
