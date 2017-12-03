@@ -8,21 +8,38 @@ public class TransitionManager : MonoBehaviour {
     public static GameObject transitionScreen;
     public static TransitionManager instance;
 
+    public Vector2 startPos1;
+    public Vector2 endPos;
+    public Vector2 startPos2;
+
+    public float timeToMove = 0.75f;
     public AnimationCurve ac;
-    static public float timeToMove = 0.75f;
+    static public float timeToMoveStatic = 0f;
 
     static private bool _side = true;
     
-    static private int startPos1 = -1078;
-    static private int endPos = 168;
-    static private int startPos2 = 1511;
+    static private Vector2 startPos1Static;
+    static private Vector2 endPosStatic = Vector2.zero;
+    static private Vector2 startPos2Static;
     
     private void Awake()
     {
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         
         transitionScreen = GameObject.FindGameObjectWithTag("transition_screen");
         DontDestroyOnLoad(this.gameObject);
+        
+        startPos1Static = startPos1;
+        endPosStatic = endPos;
+        startPos2Static = startPos2;
+        timeToMoveStatic = timeToMove;
     }
 
     public static void toggleTransiton(string sceneName)
@@ -32,21 +49,25 @@ public class TransitionManager : MonoBehaviour {
 
     public IEnumerator MoveTransition(string sceneName)
     {
+        AsyncOperation ao = SceneManager.LoadSceneAsync(sceneName);
+        ao.allowSceneActivation = false;
+
         // AkSoundEngine.PostEvent("transition_menu", gameObject);
+
         float t = 0f;
         while (t < 1)
         {
-            t += Time.unscaledDeltaTime/ timeToMove;
-            transitionScreen.transform.localPosition = Vector3.Lerp(new Vector2(startPos1, 0), new Vector2(endPos, 0), ac.Evaluate(t / timeToMove));
+            t += Time.unscaledDeltaTime / timeToMoveStatic;
+            transitionScreen.transform.position = Vector2.Lerp(startPos1Static, endPosStatic, ac.Evaluate(t / timeToMoveStatic));
             yield return null;
         }
 
-        yield return SceneManager.LoadSceneAsync(sceneName);
-        
+        ao.allowSceneActivation = true;
+
         t = 0f;
         while (t < 1) {
-            t += Time.unscaledDeltaTime / timeToMove;
-            transitionScreen.transform.localPosition = Vector3.Lerp(new Vector2(endPos, 0), new Vector2(startPos2, 0), ac.Evaluate(t / timeToMove));
+            t += Time.unscaledDeltaTime / timeToMoveStatic;
+            transitionScreen.transform.position = Vector2.Lerp(endPosStatic, startPos2Static, ac.Evaluate(t / timeToMoveStatic));
             yield return null;
         }
     }

@@ -8,6 +8,7 @@ public class MamazonManager : MonoBehaviour {
 
     public Text bunnyCounterUI;
     public Text remainingTimeUI;
+    public Animator mamazonSignal;
 
     [SerializeField]
     private int _maxBunniesInDelivery = 10;
@@ -69,6 +70,7 @@ public class MamazonManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(_deliveryCooldown - 3f);
         AkSoundEngine.PostEvent("Trigger_mamazon", gameObject);
+        mamazonSignal.SetTrigger("mamazonIncoming");
         yield return new WaitForSeconds(3f);
         StartCoroutine(Appear());
 

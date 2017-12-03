@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void GoToScene(string sceneName)
+    {
+        TransitionManager.toggleTransiton(sceneName);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
