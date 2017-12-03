@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: motor_level
+    uniqueID: 1683389927
+    locked: 0

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         EventManager.StartListening("LoseBunny", Lose);
         EventManager.StartListening("LoseWear", Lose);
+        EventManager.StartListening("LoseCop", Lose);
     }
 
     private void Lose()

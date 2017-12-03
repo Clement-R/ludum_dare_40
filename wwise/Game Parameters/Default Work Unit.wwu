@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0A90EF83-DEC1-4433-A97D-2B843564CC00}" SchemaVersion="80">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{0A90EF83-DEC1-4433-A97D-2B843564CC00}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0A90EF83-DEC1-4433-A97D-2B843564CC00}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="speed_vaisseau" ID="{580A8636-4947-4BA9-9605-D5BC3A66AA2B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="speed_perso" ID="{74F8D785-D6FC-4467-9AE1-005D237A1DB4}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="70"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="70"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="police" ID="{51B91BB4-AABE-4A32-B8EF-AB4009717E22}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
