@@ -60,6 +60,9 @@ TagManager:
   - name: bunny
     uniqueID: 173337053
     locked: 0
+  - name: mamazon
+    uniqueID: 88710831
+    locked: 0
   - name: walls
     uniqueID: 3516785427
     locked: 0
