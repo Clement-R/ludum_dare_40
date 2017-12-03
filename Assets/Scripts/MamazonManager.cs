@@ -6,11 +6,14 @@ using pkm.EventManager;
 public class MamazonManager : MonoBehaviour {
 
     [SerializeField]
+    private int _maxBunniesInDelivery = 10;
+    [SerializeField]
     private float _deliveryDuration = 10f;
     [SerializeField]
     private float _deliveryCooldown = 20f;
     private float _nextDeliveryTime = 0f;
 
+    static private int _bunniesInCurrentDelivery = 0;
     static private bool _isShipAvailable = false;
 
     public static bool IsShipAvailable()
@@ -29,7 +32,16 @@ public class MamazonManager : MonoBehaviour {
 
     private void SellBunny()
     {
-        WearManager.GainToolbox();
+        if(_bunniesInCurrentDelivery <= _maxBunniesInDelivery)
+        {
+            _bunniesInCurrentDelivery++;
+            // TODO : Increase HUD bunny counter
+            WearManager.GainToolbox();
+        }
+        else
+        {
+            // TODO : Feedback on max bunnies sold in current delivery
+        }
     }
 
     private void Update ()
@@ -58,6 +70,7 @@ public class MamazonManager : MonoBehaviour {
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(true);
         _isShipAvailable = true;
+        _bunniesInCurrentDelivery = 0;
         yield return null;
     }
 
