@@ -22,7 +22,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-18</Value>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -511,7 +511,7 @@
 									<PropertyList>
 										<Property Name="VolumeOffset" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>9.3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -672,6 +672,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -1005,12 +1010,12 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>-772</YPos>
+																<YPos>-1714</YPos>
 																<Flags>5</Flags>
 															</Point>
 															<Point>
 																<XPos>100</XPos>
-																<YPos>1029</YPos>
+																<YPos>2143</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
@@ -1053,6 +1058,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1087,7 +1097,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+							<ObjectRef Name="ui" ID="{C0FB2DB9-4069-4737-9086-9FDE51E44DEE}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1231,7 +1241,7 @@
 								<Property Name="EnablePanner" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>50</Value>
+										<Value>40</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -1254,7 +1264,7 @@
 									<PropertyList>
 										<Property Name="VolumeOffset" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>5.1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1272,6 +1282,146 @@
 							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="police" ID="{DF4532A8-87E4-458C-BD19-645B4BFC0158}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="defaite_lapin" ID="{450B419A-D3D4-4F7E-A5F3-C0C5ECC2501B}" ShortID="35157100">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bunnylol" ID="{A60EFD30-8508-4CA6-B225-1E98E6FA2212}" ShortID="187799466">
+									<Language>SFX</Language>
+									<AudioFile>bunnylol.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bunnylol" ID="{A60EFD30-8508-4CA6-B225-1E98E6FA2212}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="usure" ID="{883401F5-7C5F-4776-9BD4-0157F76BCEF2}" ShortID="408499760">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="usure" ID="{091A9F48-976D-4BD4-AEA4-6AF3F647F084}" ShortID="119835608">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>usure.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="usure" ID="{091A9F48-976D-4BD4-AEA4-6AF3F647F084}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="usurecritique" ID="{CBC08A30-EF4C-41CE-82D4-EC06633C040D}" ShortID="109058989">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="usurecritique" ID="{6E63F031-F6FA-40AB-B80D-A725753D921C}" ShortID="932001377">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>usurecritique.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="usurecritique" ID="{6E63F031-F6FA-40AB-B80D-A725753D921C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="defaite_police" ID="{5C7EAECD-50A3-40D5-8548-A3EE50F7B2B8}" ShortID="22957893">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="defaite_police" ID="{6BFC6FE1-BE03-4660-933B-5B068C65F79C}" ShortID="82854810">
+									<Language>SFX</Language>
+									<AudioFile>defaite_police.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="defaite_police" ID="{6BFC6FE1-BE03-4660-933B-5B068C65F79C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="111671__fatlane__policesiren" ID="{D7EB18B0-F6C9-4F2F-B9E3-D11F0F1C41B2}" ShortID="267968107">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="111671__fatlane__policesiren" ID="{176C9977-3A63-433E-9C8D-21C8819D1AA4}" ShortID="579303373">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.54239069475446"/>
+										<Property Name="TrimBegin" Type="Real64" Value="9.59709765625001"/>
+										<Property Name="TrimEnd" Type="Real64" Value="13.5958883463542"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>111671__fatlane__policesiren.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="111671__fatlane__policesiren" ID="{176C9977-3A63-433E-9C8D-21C8819D1AA4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="low_speed" ID="{1863CF5F-D601-47CE-8B2E-6408A2146397}" ShortID="177781418">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0A4413FB-7A4E-4CBF-A078-BF68A45FEEC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="low_speed" ID="{F9E4D761-AAA4-4BE2-BCFF-65F4D36EA9F8}" ShortID="62730705">
+									<Language>SFX</Language>
+									<AudioFile>low_speed.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="low_speed" ID="{F9E4D761-AAA4-4BE2-BCFF-65F4D36EA9F8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
