@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{79ECA659-7220-4C63-86F3-C5AA623BFA6E}" SchemaVersion="80">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{79ECA659-7220-4C63-86F3-C5AA623BFA6E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{79ECA659-7220-4C63-86F3-C5AA623BFA6E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{7C019116-28E5-495D-AB23-33807881C681}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_game_music" ID="{03F68105-E06B-411D-9B87-1CEDD67CDAFC}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_reparation" ID="{B10CD4A6-8C6B-4540-A2D8-F459FAD2FCF4}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_moteur" ID="{E7A1CE2E-0DF7-49C3-82FB-ACAB0A144201}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_reproduction" ID="{7C2A8408-882A-4F80-8332-4C52C04729EB}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_jetpack" ID="{6E3D33A8-17E2-4AD3-ADD4-042810BFD64A}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="metal" ID="{DC5D477D-B058-4D3E-BA14-6CA62DA2C688}" WorkUnitID="{F40E6C3C-A575-457F-B72F-63581A6D5768}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_action_lapin" ID="{47278591-4769-43A9-B32C-F292F3883FF8}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_police" ID="{8546BF1B-0AE0-4852-B7DC-EEC4D40062B6}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_police" ID="{CF3CE80B-F2DE-460B-9396-72ECC98DCCCF}" WorkUnitID="{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="speed_perso" ID="{74F8D785-D6FC-4467-9AE1-005D237A1DB4}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="police" ID="{51B91BB4-AABE-4A32-B8EF-AB4009717E22}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="speed_vaisseau" ID="{580A8636-4947-4BA9-9605-D5BC3A66AA2B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

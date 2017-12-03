@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4970103102704828}
   - component: {fileID: 212069381427027548}
-  - component: {fileID: 58847095016772136}
   - component: {fileID: 50481935483937478}
+  - component: {fileID: 95363462021961836}
+  - component: {fileID: 58762635734093652}
   m_Layer: 8
   m_Name: Bunny
   m_TagString: Bunny
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1217166061105030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 114, y: -330, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,8 +62,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &58847095016772136
+  m_Constraints: 0
+--- !u!58 &58762635734093652
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -70,13 +71,30 @@ CircleCollider2D:
   m_GameObject: {fileID: 1217166061105030}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 429b43ce095096b409254cd2d4af0b99, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 16}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 16
+  m_Radius: 65
+--- !u!95 &95363462021961836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217166061105030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a16d32b994fc6648b25919a172e07ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212069381427027548
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -110,13 +128,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7dfbf32750cb8b549a9acc79c9396cff, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7bce00af409109349ad4c418ef599c7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 114, y: 130}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

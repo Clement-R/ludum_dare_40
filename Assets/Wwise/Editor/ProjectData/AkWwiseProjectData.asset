@@ -16,15 +16,115 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{36301415-3A98-45B2-B5CC-9A7DEED7F7E4}'
-    m_lastTimePsrt1: 723154010
-    m_lastTimePart2: -1999292040
-    List: []
+    m_lastTimePsrt1: 1524552733
+    m_lastTimePart2: -1999291948
+    List:
+    - Name: Play_action_lapin
+      Path: Default Work Unit\Play_action_lapin
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_action_lapin
+        ObjectType: 3
+      ID: 1912676331
+      Guid: 918527476947a943b32cf292f3883ff8
+      maxAttenuation: 0
+    - Name: Play_aspire
+      Path: Default Work Unit\Play_aspire
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_aspire
+        ObjectType: 3
+      ID: -1801996072
+      Guid: 89c5ba3972e90140a6bde30e2213095d
+      maxAttenuation: 0
+    - Name: Play_four
+      Path: Default Work Unit\Play_four
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_four
+        ObjectType: 3
+      ID: -1261879270
+      Guid: b7829a239821b54f9fadb5009616b127
+      maxAttenuation: 0
+    - Name: Play_game_music
+      Path: Default Work Unit\Play_game_music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_game_music
+        ObjectType: 3
+      ID: -153929808
+      Guid: 0581f6036be01d419b871cedd67cdafc
+      maxAttenuation: 0
+    - Name: Play_jetpack
+      Path: Default Work Unit\Play_jetpack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_jetpack
+        ObjectType: 3
+      ID: -616926256
+      Guid: a8333d6ee217d34aadd4042810bfd64a
+      maxAttenuation: 0
+    - Name: Play_metal
+      Path: Default Work Unit\Play_metal
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_metal
+        ObjectType: 3
+      ID: -1095106585
+      Guid: ed473275f0bd4749a49b1d5f6a33c2fc
+      maxAttenuation: 0
+    - Name: Play_moteur
+      Path: Default Work Unit\Play_moteur
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_moteur
+        ObjectType: 3
+      ID: 1484926170
+      Guid: 2ecea1e7f70dc34982fbacab0a144201
+      maxAttenuation: 0
+    - Name: Play_police
+      Path: Default Work Unit\Play_police
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_police
+        ObjectType: 3
+      ID: 1656134708
+      Guid: 1bbf4685e00a5248b7dceec4d40062b6
+      maxAttenuation: 0
+    - Name: Play_reparation
+      Path: Default Work Unit\Play_reparation
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_reparation
+        ObjectType: 3
+      ID: 2028669661
+      Guid: a6d40cb16b8c4045a2d8f459fad2fcf4
+      maxAttenuation: 0
+    - Name: Play_reproduction
+      Path: Default Work Unit\Play_reproduction
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_reproduction
+        ObjectType: 3
+      ID: -951619276
+      Guid: 08842a7c2a88804f83324c52c04729eb
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{EB0238E4-CE68-4DCF-BA2F-EFF61F43759D}'
-    m_lastTimePsrt1: 723179034
-    m_lastTimePart2: -1999292040
+    m_lastTimePsrt1: 1525453590
+    m_lastTimePart2: -1999291948
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -44,16 +144,52 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{96F7F2C1-6C84-4992-9021-13AA6FF45817}'
-    m_lastTimePsrt1: 723279131
-    m_lastTimePart2: -1999292040
-    List: []
+    m_lastTimePsrt1: 1531354226
+    m_lastTimePart2: -1999291948
+    List:
+    - Name: ludum_soundbank
+      Path: Default Work Unit\ludum_soundbank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ludum_soundbank
+        ObjectType: 7
+      ID: -161643660
+      Guid: 330a0a3481010f4fbaed16e23695adc2
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A90EF83-DEC1-4433-A97D-2B843564CC00}'
-    m_lastTimePsrt1: 723164022
-    m_lastTimePart2: -1999292040
-    List: []
+    m_lastTimePsrt1: 1524577748
+    m_lastTimePart2: -1999291948
+    List:
+    - Name: police
+      Path: Default Work Unit\police
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: police
+        ObjectType: 13
+      ID: 291106007
+      Guid: b41bb951beaa324ab8efab4009717e22
+    - Name: speed_perso
+      Path: Default Work Unit\speed_perso
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: speed_perso
+        ObjectType: 13
+      ID: 1267572104
+      Guid: 85d7f874fcd667449ae1005d237a1db4
+    - Name: speed_vaisseau
+      Path: Default Work Unit\speed_vaisseau
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: speed_vaisseau
+        ObjectType: 13
+      ID: 130322156
+      Guid: 36860a584749a94b9605d5bc3a66aa2b
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
