@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using pkm.EventManager;
 
 public class MotorBehavior : MonoBehaviour {
 
-# region PUBLIC_VARIABLES
+    # region PUBLIC_VARIABLES
     public Sprite[] motorLevelSprites;
+    public Text textScore;
     #endregion PUBLIC_VARIABLES
 
     #region PRIVATE_VARIABLES
@@ -49,6 +51,7 @@ public class MotorBehavior : MonoBehaviour {
 
         _motorLevelSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
         _motorTube = transform.GetChild(1).GetComponent<Animator>();
+        _copDistance = _initialCopDistance;
     }
 	
     private void AddPower()
@@ -93,5 +96,8 @@ public class MotorBehavior : MonoBehaviour {
         {
             EventManager.TriggerEvent("LoseCop");
         }
+
+        // Update text score
+        textScore.text = (_distance - _initialDistance).ToString();
     }
 }

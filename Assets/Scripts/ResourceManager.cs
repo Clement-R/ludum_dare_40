@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using pkm.EventManager;
 
 public class ResourceManager : MonoBehaviour {
     public int maxBunnies = 100;
     static public int maxBunniesStatic = 100;
+
+    public Text textBunnies;
+    public Image bunniesProgressBar;
 
     public float scaleFactor = 1f;
     public GameObject bunnyPrefab;
@@ -55,6 +59,10 @@ public class ResourceManager : MonoBehaviour {
         {
             EventManager.TriggerEvent("LoseBunnyNone");
         }
+
+        print(_bunnyCounter / maxBunniesStatic);
+        bunniesProgressBar.fillAmount = _bunnyCounter / (float) maxBunniesStatic;
+        textBunnies.text = _bunnyCounter.ToString() + " / " + maxBunniesStatic.ToString();
     }
 
     static public int GetNumberOfBunnies()
