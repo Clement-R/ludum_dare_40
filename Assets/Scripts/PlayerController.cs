@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour {
     
     private Vector2 velocity = Vector2.zero;
     private Rigidbody2D _rb;
+    private SpriteRenderer _sr;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -24,5 +26,17 @@ public class PlayerController : MonoBehaviour {
         // Move the character
         Vector2.SmoothDamp(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), ref velocity, _smoothTime, _maxSpeed, Time.deltaTime);
         _rb.velocity = velocity;
+
+        // Flip character sprite
+        if(transform.position.x >= Camera.main.ScreenToWorldPoint(Input.mousePosition).x)
+        {
+            _sr.flipY = true;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180f));
+        }
+        else
+        {
+            _sr.flipY = false;
+            transform.rotation = Quaternion.Euler(Vector3.zero);
+        }
     }
 }

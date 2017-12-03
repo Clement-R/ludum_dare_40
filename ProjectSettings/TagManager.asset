@@ -48,6 +48,15 @@ TagManager:
   - name: motor_level
     uniqueID: 1683389927
     locked: 0
+  - name: player_particles
+    uniqueID: 3639906845
+    locked: 0
+  - name: player
+    uniqueID: 164471057
+    locked: 0
+  - name: bunny
+    uniqueID: 173337053
+    locked: 0
   - name: walls
     uniqueID: 3516785427
     locked: 0
