@@ -1563,6 +1563,16 @@ Prefab:
       propertyPath: m_Size.x
       value: 126.15541
       objectReference: {fileID: 0}
+    - target: {fileID: 114135856902636776, guid: f35626a71a3c0fe439f4dbd87ef10b89,
+        type: 2}
+      propertyPath: _maxBunniesInDelivery
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114312680563694822, guid: f35626a71a3c0fe439f4dbd87ef10b89,
+        type: 2}
+      propertyPath: m_Text
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f35626a71a3c0fe439f4dbd87ef10b89, type: 2}
   m_IsPrefabParent: 0
