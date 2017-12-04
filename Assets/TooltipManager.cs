@@ -1,22 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using pkm.EventManager;
 
 public class TooltipManager : MonoBehaviour {
 
     public GameObject soldBunnyFeedback;
+    public Transform soldTransform;
+
     public GameObject soldFullToolboxFeedback;
     public GameObject canRepairWallIcon;
 
     private void Start ()
     {
-        // TODO : When a bunny is sold pop a toolbox floating icon (valide_mamazon)
-        // TODO : If the player try to buy a toolbox and he's full pop an icon (full)
         canRepairWallIcon.SetActive(false);
+
+        EventManager.StartListening("BunnySold", PlayBunnySold);
+        EventManager.StartListening("MaxTools", PlayMaxTools);
     }
 
     public void ToggleRepairIcon(bool active)
     {
         canRepairWallIcon.SetActive(active);
+    }
+
+    public void PlayBunnySold()
+    {
+        Instantiate(soldBunnyFeedback, soldTransform.position, Quaternion.identity);
+    }
+
+    public void PlayMaxTools()
+    {
+        Instantiate(soldFullToolboxFeedback, soldTransform.position, Quaternion.identity);
     }
 }

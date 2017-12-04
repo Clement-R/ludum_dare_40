@@ -53,10 +53,8 @@ public class MamazonManager : MonoBehaviour {
             wearManager.GainToolbox();
 
             gameObject.transform.GetChild(0).GetChild(0).GetComponent<Animator>().SetTrigger("putRabbit");
-        }
-        else
-        {
-            // TODO : Feedback on max bunnies sold in current delivery
+
+            EventManager.TriggerEvent("BunnySold");
         }
     }
 

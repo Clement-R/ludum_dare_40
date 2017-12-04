@@ -126,8 +126,7 @@ public class HolderBehavior : MonoBehaviour {
                 }
                 else
                 {
-                    print("full toolbox !!");
-                    // TODO : Feedback on already have max tools
+                    EventManager.TriggerEvent("MaxTools");
                 }
             }
             else

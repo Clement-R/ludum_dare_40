@@ -16,6 +16,9 @@ public class MotorBehavior : MonoBehaviour {
     public Text distanceText;
     public Text distanceTextScore;
 
+    public GameObject dangerIconMotor;
+    public GameObject dangerIconDistance;
+
     #endregion PUBLIC_VARIABLES
 
     #region PRIVATE_VARIABLES
@@ -65,6 +68,9 @@ public class MotorBehavior : MonoBehaviour {
         _copDistance = _initialCopDistance;
 
         StartCoroutine(PlayLowSpeedSound());
+
+        dangerIconDistance.SetActive(false);
+        dangerIconMotor.SetActive(false);
     }
 
     IEnumerator PlayLowSpeedSound()
@@ -124,10 +130,19 @@ public class MotorBehavior : MonoBehaviour {
             if (distanceDelta <= (300 * 60 * 7) && Time.timeScale > 0)
             {
                 AkSoundEngine.PostEvent("Play_police", gameObject);
+                // Show a danger sign when distance is close
+                if (!dangerIconDistance.activeSelf)
+                {
+                    dangerIconDistance.SetActive(true);
+                }
             }
             else
             {
                 AkSoundEngine.PostEvent("Stop_police", gameObject);
+                if (dangerIconDistance.activeSelf)
+                {
+                    dangerIconDistance.SetActive(false);
+                }
             }
 
             // Update text score
@@ -139,11 +154,24 @@ public class MotorBehavior : MonoBehaviour {
 
             backgroundManager.ChangeBackgroundSpeed(_cappedSpeed);
 
-            // TODO : Toggle an icon when there is 2 level of motor
-            // TODO : Show a danger sign when distance is close (cop sound)
+            // Toggle an icon when there is 2 level of motor
+            if(_cappedSpeed <= 2)
+            {
+                if (!dangerIconMotor.activeSelf)
+                {
+                    dangerIconMotor.SetActive(true);
+                }
+            }
+            else
+            {
+                if (dangerIconMotor.activeSelf)
+                {
+                    dangerIconMotor.SetActive(false);
+                }
+            }
         }
     }
-
+    
     private void AddPower()
     {
         _speed += _bunnyPower;
