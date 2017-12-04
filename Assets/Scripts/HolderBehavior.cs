@@ -10,6 +10,8 @@ public class HolderBehavior : MonoBehaviour {
     public Sprite idleSprite;
     public Sprite holdingSprite;
 
+    public TooltipManager tooltipManager;
+
     [SerializeField]
     private float _grabRadius = 150f;
 
@@ -75,6 +77,15 @@ public class HolderBehavior : MonoBehaviour {
                 {
                     UseZone();
                 }
+            }
+
+            if(interactionController.GetIsInWallZone())
+            {
+                tooltipManager.ToggleRepairIcon(true);
+            }
+            else
+            {
+                tooltipManager.ToggleRepairIcon(false);
             }
         }
     }
