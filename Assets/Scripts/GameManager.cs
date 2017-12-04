@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
     private void Lose()
     {
         gameOverMenu.SetActive(true);
+        _pause = true;
         Time.timeScale = 0f;
     }
 

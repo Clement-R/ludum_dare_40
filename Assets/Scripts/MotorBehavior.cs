@@ -14,6 +14,8 @@ public class MotorBehavior : MonoBehaviour {
     public Image copMeter;
     public Image distanceMeter;
     public Text distanceText;
+    public Text distanceTextScore;
+
     #endregion PUBLIC_VARIABLES
 
     #region PRIVATE_VARIABLES
@@ -130,6 +132,7 @@ public class MotorBehavior : MonoBehaviour {
 
             // Update text score
             textScore.text = (_distance - _initialDistance).ToString();
+            distanceTextScore.text = (_distance - _initialDistance).ToString();
 
             // Update distance meter
             distanceText.text = Mathf.FloorToInt(distanceDelta).ToString();
