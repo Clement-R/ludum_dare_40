@@ -26,11 +26,13 @@ public class TooltipManager : MonoBehaviour {
 
     public void PlayBunnySold()
     {
-        Instantiate(soldBunnyFeedback, soldTransform.position, Quaternion.identity);
+        GameObject go = Instantiate(soldBunnyFeedback, soldTransform.position, Quaternion.identity);
+        Destroy(go, 0.417f);
     }
 
     public void PlayMaxTools()
     {
-        Instantiate(soldFullToolboxFeedback, soldTransform.position, Quaternion.identity);
+        GameObject go = Instantiate(soldFullToolboxFeedback, soldTransform.position, Quaternion.identity);
+        Destroy(go, 1f);
     }
 }

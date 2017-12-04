@@ -105,13 +105,18 @@ public class WearManager : MonoBehaviour {
         int index = 0;
         foreach (var wall in _walls)
         {
-            if(wall.health >= maxHealth)
+            print("health : " + wall.health);
+
+            if(wall.health > maxHealth)
             {
                 maxHealth = wall.health;
                 walls.Add(index);
             }
             index++;
         }
+
+        print("Max : " + maxHealth);
+        print("---------------");
 
         // Get random wall that will get damaged
         int wallIndex = walls[Random.Range(0, walls.Count)];
